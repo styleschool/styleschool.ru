@@ -134,11 +134,9 @@ function SocNetIcons(props: any) {
       <a href="https://imagemakerpro.ru" target="_blank">
         <Image
           src="/regicon.png"
+          height="18"
+          width="18"
           alt="ВШСДТ"
-          style={{
-            height: 18,
-            width: "auto"
-          }}
         />
       </a>
       
@@ -177,7 +175,8 @@ function SocNetIcons(props: any) {
       <a href="https://open-ai.ru/" target="_blank">
         <Image
           src="/open-ai.png"
-          style={{ height: 18, width: "auto" }}
+          height="18"
+          width="18"
           alt="Open AI"
         />
       </a>

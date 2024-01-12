@@ -10,7 +10,7 @@ export default function Home() {
   <Flex direction="column">
     <Header/>
     <Flex direction="column" align="center" p="1.5rem">
-      <img src="/pawel-czerwinski-O3i.jpg" width='200px' alt="logo" />
+      <img src="/Group_72.jpg" width='200px' alt="logo" />
     </Flex>
     <Flex direction="row" mb="1.5rem" justify="center">
       <Flex direction="column">
