@@ -11,7 +11,7 @@ export default function Home() {
   <Flex direction="column">
     <Header/>
     <Flex direction="column" align="center" p="1.5rem">
-      <Image src="/Group_72.jpg" width="200" height="200" alt="logo" />
+      <Image src="Group_72.jpg" width="200" height="200" alt="logo" />
     </Flex>
     <Flex direction="row" mb="1.5rem" justify="center">
       <Flex direction="column">
