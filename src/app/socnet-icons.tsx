@@ -3,7 +3,7 @@ import { Rutube } from "./icons";
 import { Flex } from '@chakra-ui/react';
 import Image from 'next/image';
 
-const styles = theme => ({
+const styles = (theme:any) => ({
   icons: {
     textAlign: "right",
     padding: 0,
@@ -13,7 +13,7 @@ const styles = theme => ({
   }
 });
 
-export function Vk(props) {
+export function Vk(props:any) {
   return (
     <svg width={props.size || 24} height={props.size || 24} viewBox="0 0 24 20">
       <path
@@ -27,7 +27,7 @@ export function Vk(props) {
   );
 }
 
-export function Facebook(props) {
+export function Facebook(props:any) {
   return (
     <svg width={props.size || 24} height={props.size || 24} viewBox="0 0 24 24">
       <path
@@ -41,7 +41,7 @@ export function Facebook(props) {
   );
 }
 
-export function Instagram(props) {
+export function Instagram(props:any) {
   return (
     <svg width={props.size || 24} height={props.size || 24} viewBox="0 0 24 24">
       <path
@@ -52,7 +52,7 @@ export function Instagram(props) {
   );
 }
 
-export function Youtube(props) {
+export function Youtube(props:any) {
   return (
     <svg width={props.size || 24} height={props.size || 24} viewBox="0 0 24 20">
       <path
@@ -66,7 +66,7 @@ export function Youtube(props) {
   );
 }
 
-export function Login(props) {
+export function Login(props:any) {
   return (
     <svg width={props.size || 24} height={props.size || 24} viewBox="0 0 24 24">
       <path
@@ -77,7 +77,7 @@ export function Login(props) {
   );
 }
 
-export function Path(props) {
+export function Path(props:any) {
   return (
     <svg width={props.size || 24} height={props.size || 24} viewBox="0 0 24 24">
       <path
@@ -91,7 +91,7 @@ export function Path(props) {
   );
 }
 
-export function Login2(props) {
+export function Login2(props:any) {
   return (
     <svg width={props.size || 24} height={props.size || 24} viewBox="0 0 24 24">
       <circle

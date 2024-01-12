@@ -1,6 +1,12 @@
 import React from "react";
 
-export default function List(props) {
+export default function List(props: {
+  arr: string[];
+  style?: any;
+  classLi?: string; 
+  olStyle?: any;
+  num?: number | boolean;
+}) {
   var type;
   if (props.num === true) {
     type = "decimal";

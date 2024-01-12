@@ -1,6 +1,15 @@
 import React from "react";
 
-export default function Paragraph(props) {
+export default function Paragraph(props:{
+  color?: any;
+  j?: any;
+  r?: any;
+  c?: any;
+  style?: any;
+  classElement?: any;
+  styleBox?: any;
+  content: any[]; 
+}) {
   const style = {
     padding: "5px 0",
     fontSize: "1em",

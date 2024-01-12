@@ -203,7 +203,7 @@ export default function Footer(props: any) {
               </UnorderedList>
             </Flex>
           </Flex>
-          <HStack mb='1rem' spacing='1rem'  sx={{flexWrap: 'wrap'}}>>
+          <HStack mb='1rem' spacing='1rem'  sx={{flexWrap: 'wrap'}}>
             <Text sx={{textTransform: 'uppercase', color: 'white'}}>ТЕГИ</Text>
             <HoveredStyledLink text='#ВШСДТ' />
             <HoveredStyledLink text='#имиджмейкерстилист' />
