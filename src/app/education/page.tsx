@@ -1,7 +1,8 @@
 'use client';
 
-import { Flex, Text, Box, Link } from '@chakra-ui/react'
-import NextLink from 'next/link'
+import { Flex, Text, Box, Link } from '@chakra-ui/react';
+import NextLink from 'next/link';
+import Image from 'next/image';
 import Footer from '../footer';
 import Header from '../header';
 
@@ -10,7 +11,7 @@ export default function Home() {
   <Flex direction="column">
     <Header/>
     <Flex direction="column" align="center" p="1.5rem">
-      <img src="/Group_72.jpg" width='200px' alt="logo" />
+      <Image src="/Group_72.jpg" width="200" height="200" alt="logo" />
     </Flex>
     <Flex direction="row" mb="1.5rem" justify="center">
       <Flex direction="column">
