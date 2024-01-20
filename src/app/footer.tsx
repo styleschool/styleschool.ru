@@ -1,18 +1,18 @@
 'use client'
-import React from "react";
 
-import { Grid, GridItem, useMediaQuery, Box, Text, Flex, UnorderedList, ListItem, HStack } from '@chakra-ui/react'
-import Paragraph from "./paragraph";
-import List from "./list";
-import SocNetIcons from "./socnet-icons";
-import { Telegram, Whatsapp } from "./socnet-icons";
+import { Box, Flex, HStack, ListItem, Stack, Text, UnorderedList, useMediaQuery } from '@chakra-ui/react';
+import { PiTelegramLogoThin, PiWhatsappLogoThin, PiYoutubeLogoThin } from "react-icons/pi";
+import { SlSocialVkontakte } from "react-icons/sl";
+import { SocialButton } from "./buttons/social-button";
 import { StyledLink } from './footer-link';
+import { IconProvider } from "./icon-provider";
+import { SocialIcon } from './buttons/social-icon';
 
 
 const font = "Alegreya Sans";
 
-const TextTitle = ({text}:{text: string}) => {
-  return <Text textStyle="footerTitle">{text}</Text>
+const TextTitle = ({text, textStyles = 'footerTitle', textProps }:{text: string; textStyles?: string; textProps?: any}) => {
+  return <Text textStyle={textStyles} {...textProps}>{text}</Text>
 }
 
 const HoveredStyledLink = ({text}:{text: string}) => {
@@ -26,27 +26,37 @@ const HoveredStyledLink = ({text}:{text: string}) => {
         }
       }
     }}
-    href="/network-educational-programs">{text}</StyledLink>)
+    href="/network-educational-programs" text={text} />)
 }
 
 export default function Footer(props: any) {
   const [isMax959] = useMediaQuery('(max-width: 959px)')
+  const [isMax628] = useMediaQuery('(max-width: 628px)')
   return (
     <Flex align="center" justify="center" bg="#F9F9F9" p={isMax959 ? "4rem 1rem" : "4rem 6rem"}>
       <Flex direction="column" w="100%">
-        <Flex direction="row" justify="space-between" mb="2rem">
+        <Flex 
+          direction={isMax628 ?'column' : "row"} 
+          justify="space-between"
+          mb="0.5rem" 
+          sx={{
+            '& > *:not(:last-child)': {
+              mb: isMax628 ? '1rem' : 0
+            }
+          }}
+        >
           <Box>
-            <TextTitle text="НАПРАВЛЕНИЯ ОБУЧЕНИЯ" />
+            <TextTitle text="НАПРАВЛЕНИЯ ОБУЧЕНИЯ" textProps={{ as: 'h2', mb: '0.3rem'}} />
             <Flex direction="column">
-              <StyledLink href="#">Репутационные технологии</StyledLink>
-              <StyledLink href="#">Искусственный интеллект и нейросети</StyledLink>
-              <StyledLink href="#">Имидж и стиль</StyledLink>
-              <StyledLink href="#">Дизайн среды</StyledLink>
-              <StyledLink href="#">Управление продуктом</StyledLink>
+              <StyledLink href="#" text="Репутационные технологии" />
+              <StyledLink href="#" text="Искусственный интеллект и нейросети" />
+              <StyledLink href="#" text="Имидж и стиль" />
+              <StyledLink href="#" text="Дизайн среды" />
+              <StyledLink href="#" text="Управление продуктом" />
             </Flex>
           </Box>
           <Box>
-            <TextTitle text="АДРЕС МОСКВА" />
+            <TextTitle text="АДРЕС МОСКВА" textProps={{ as: 'h2', mb: '0.3rem'}} />
               <Text textStyle="footerText">
                 г. Москва, Проспект Мира,
                 <br />
@@ -59,7 +69,7 @@ export default function Footer(props: any) {
               </Text>
           </Box>
           <Box>
-            <TextTitle text="ВРЕМЯ РАБОТЫ" />
+            <TextTitle text="ВРЕМЯ РАБОТЫ" textProps={{ as: 'h2', mb: '0.3rem'}} />
               
             <Text textStyle="footerText">
               {props.filial || "Москва"}
@@ -74,34 +84,29 @@ export default function Footer(props: any) {
               Суб. с 11:00 до 14:00
             </Text>
           </Box>
-          <Box>
-            <TextTitle text="КОНТАКТЫ" />
-            <Flex 
-              direction='row' 
-              align='center' 
-              justify='center'
-              sx={{
-                '& > *:not(:last-child)': {
-                  mr: '0.5rem'
-                }
-              }}
-            >
-              <a href="https://t.me/styleschoolru" target="_blank"><Telegram /></a>
-              <a href="https://t.me/styleschoolru" target="_blank"><Text textStyle="footerText">Telegram</Text></a>
-            </Flex>
-            <Flex 
-              direction='row' 
-              align='center' 
-              justify='center'
-              sx={{
-                '& > *:not(:last-child)': {
-                  mr: '0.5rem'
-                }
-              }}
-            >
-            <a href="https://chat.whatsapp.com/LQpG7XjdGSBAiaXNgcoE54" target="_blank"><Whatsapp /></a>
-            <a href="https://chat.whatsapp.com/LQpG7XjdGSBAiaXNgcoE54" target="_blank"><Text textStyle="footerText">Whatsapp</Text></a>
-            </Flex>
+          <Flex direction="column" align="flex-start" justify="flex-start">
+            <TextTitle text="КОНТАКТЫ" textProps={{ as: 'h2', mb: '0.3rem'}} />
+            
+            <SocialButton 
+              // @ts-ignore
+              leftIcon={
+                <IconProvider 
+                  icon={<PiTelegramLogoThin />} 
+                />
+              }
+            />
+          
+            <SocialButton 
+            //@ts-ignore
+              href='https://chat.whatsapp.com/LQpG7XjdGSBAiaXNgcoE54' 
+              title='WhatsApp'
+              leftIcon={
+                <IconProvider 
+                  icon={<PiWhatsappLogoThin />} 
+
+                />
+              }
+            />
             {props.phones ? (
               <Text textStyle="footerText">
                 {props.phones}
@@ -114,14 +119,19 @@ export default function Footer(props: any) {
               </>
             )}
             <Box>
-              <StyledLink href="/contacts">
-                все контакты
-              </StyledLink>
+              <StyledLink href="/contacts" text="Все контакты" />
             </Box>
-          </Box>
+          </Flex>
           <Box>
-            <TextTitle text="ПРОГРАММЫ РАЗВИТИЯ" />
-              <UnorderedList>
+            <TextTitle text="ПРОГРАММЫ РАЗВИТИЯ" textProps={{ as: 'h2', mb: '0.3rem'}} />
+              <UnorderedList
+                sx={{
+                  '& > li': {
+                    lineHeight: '100%',
+                    height: 'auto',
+                  }
+                }}
+              >
                 <ListItem>
                   <StyledLink 
                     textProps={{
@@ -133,7 +143,7 @@ export default function Footer(props: any) {
                         }
                       }
                     }}
-                    href="/partners-pro">Открытое образование</StyledLink>
+                    href="/partners-pro" text='Открытое образование' />
                 </ListItem>
                 <ListItem>
                   <StyledLink 
@@ -146,7 +156,7 @@ export default function Footer(props: any) {
                         }
                       }
                     }}
-                    href="/network-educational-programs">Сотрудничество</StyledLink>
+                    href="/network-educational-programs" text="Сотрудничество" />
                 </ListItem>
                 <ListItem>
                   <StyledLink 
@@ -159,7 +169,7 @@ export default function Footer(props: any) {
                         }
                       }
                     }}
-                    href="/corporate">Сетевые программы</StyledLink>
+                    href="/corporate" text="Сетевые программы" />
                 </ListItem>
                 <ListItem>
                   <StyledLink 
@@ -172,7 +182,7 @@ export default function Footer(props: any) {
                         }
                       }
                     }}
-                    href="/vacancy">Разработка курсов</StyledLink>
+                    href="/vacancy" text="Разработка курсов" />
                 </ListItem>
                 <ListItem>
                   <StyledLink 
@@ -185,30 +195,25 @@ export default function Footer(props: any) {
                         }
                       }
                     }}
-                    href="/vacancy">Резюме & Вакансии</StyledLink>
+                    href="/vacancy" text='Резюме & Вакансии' />
                 </ListItem>
               </UnorderedList>
           </Box>
         </Flex>
         <Flex direction="column">
-          <Box w="100%" h="0.05rem" bg="black" mb="1rem" />
-          <SocNetIcons />
-          <Flex direction="row" justify="space-between" alignSelf="center" mb="2rem">
-            <Flex direction="column" justify="start" alignSelf="center" w="100%">
+          <Box w="100%" h="0.05rem" bg="black" mb="0.1rem" />
+          <Stack direction="row" justify="flex-end" align="center" w="100%">
+            <SocialIcon icon={<IconProvider size='1.2rem' icon={<PiTelegramLogoThin />} />} ariaLabel='Telegram' />
+            <SocialIcon icon={<IconProvider size='1.2rem' icon={<SlSocialVkontakte />} />} ariaLabel='Vkontakte' />
+            <SocialIcon icon={<IconProvider size='1.2rem' icon={<PiYoutubeLogoThin />} />} ariaLabel='Youtube' />
+          </Stack>
+          <Flex direction={isMax628 ? "column" : "row"} justify="space-between" alignSelf='flex-start' mb="2rem">
+            <Flex direction="column" justify="start" alignSelf="center" w="100%" mb='1rem'>
               <Text textStyle="footerText">Автономная некоммерческая организация</Text>
               <Text textStyle="footerText">Дополнительного профессионального образования</Text>
-              <Text textStyle="footerText">«Высшая школа стилистики, дизайна и технологий»</Text>
-              <Box sx={{ height: "1rem" }} />
-              <StyledLink textStyles="footerLink"
-                textProps={{
-                  sx: {
-                    textDecoration: 'underline',
-                    _hover: {
-                      textDecoration: 'none',
-                      color: 'rgb(87,143,163)'
-                    }
-                  }
-                }} href="/information-about-educational-organization">Сведения об образовательной организации</StyledLink>
+              <Text textStyle="footerText" mb='1rem'>«Высшая школа стилистики, дизайна и технологий»</Text>
+              
+              <Flex direction="column" justify="start" alignSelf="center" w="100%">
                 <StyledLink textStyles="footerLink"
                   textProps={{
                     sx: {
@@ -218,43 +223,62 @@ export default function Footer(props: any) {
                         color: 'rgb(87,143,163)'
                       }
                     }
-                  }}
-                  href="/information">Информация для пользователей
-                </StyledLink>
+                  }} href="/information-about-educational-organization" text="Сведения об образовательной организации" 
+                />
                 <StyledLink textStyles="footerLink"
-                  textProps={{
-                    sx: {
-                      textDecoration: 'underline',
-                      _hover: {
-                        textDecoration: 'none',
-                        color: 'rgb(87,143,163)'
+                    textProps={{
+                      sx: {
+                        textDecoration: 'underline',
+                        _hover: {
+                          textDecoration: 'none',
+                          color: 'rgb(87,143,163)'
+                        }
                       }
-                    }
-                  }}
-                  href="https://old.styleschool.ru/archive">Архив курсов
-              </StyledLink>
+                    }}
+                    href="/information" text="Информация для пользователей" 
+                  />
+                  <StyledLink textStyles="footerLink"
+                    textProps={{
+                      sx: {
+                        textDecoration: 'underline',
+                        _hover: {
+                          textDecoration: 'none',
+                          color: 'rgb(87,143,163)'
+                        }
+                      }
+                    }}
+                    href="https://old.styleschool.ru/archive" text="Архив курсов" 
+                  />
               </Flex>
+            </Flex>
             <Flex direction="column" justify="start" alignSelf="center" w="100%">
-              <Text color="rgb(187, 144, 41)">
+              <Text color="rgb(187, 144, 41)" textStyle="footerTitle">
                 Партнёры:
               </Text>
-              <UnorderedList color="rgb(187, 144, 41)">
+              <UnorderedList color="rgb(187, 144, 41)"
+                sx={{
+                  '& > li': {
+                    lineHeight: isMax628 ? '100%' : '150%',
+                    height: 'auto',
+                  }
+                }}
+              >
                 <ListItem>
-                Национальный исследовательский Томский государственный университет
+                  <TextTitle text='Национальный исследовательский Томский государственный университет' textProps={{sx: {textTransform: 'none', fontWeight: 'regular'}}} />
                 </ListItem>
                 <ListItem>
-                Инновационно-образовательный комплекс «Техноград»
+                  <TextTitle text='Инновационно-образовательный комплекс «Техноград»' textProps={{sx: {textTransform: 'none', fontWeight: 'regular'}}} />
                 </ListItem>
                 <ListItem>
-                Московский физико-технический институт
+                  <TextTitle text='Московский физико-технический институт' textProps={{sx: {textTransform: 'none', fontWeight: 'regular'}}} />
                 </ListItem>
                 <ListItem>
-                Московский художественно-промышленный институт
+                  <TextTitle text='Московский художественно-промышленный институт' textProps={{sx: {textTransform: 'none', fontWeight: 'regular'}}} />
                 </ListItem>
               </UnorderedList>
             </Flex>
           </Flex>
-          <HStack mb="1rem" spacing="1rem"  sx={{flexWrap: 'wrap'}}>
+          <HStack mb="1rem" spacing="0.4rem"  sx={{flexWrap: 'wrap'}}>
             <Text sx={{textTransform: 'uppercase', color: 'black'}}>ТЕГИ</Text>
             <HoveredStyledLink text="#аналитик" />
             <HoveredStyledLink text="#бесплатные" />

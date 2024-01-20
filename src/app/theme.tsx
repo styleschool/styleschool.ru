@@ -45,7 +45,7 @@ const themeChakra = extendTheme({
      heading: "'Alegreya Sans', sans-serif",
    },
   fontSizes: {
-    '3xs': "calc(0.2rem + 0.7vmax)",
+    '3xs': "calc(0.4rem + 0.5vmax)",
     '2xs': "calc(0.5rem + 1vmax)",
     xs: "calc(0.75rem + 1vmax)",
     sm: 'calc(0.95rem + 1vmax)', //"0.875rem",
@@ -202,7 +202,7 @@ const themeChakra = extendTheme({
     },
     footerTitle: {
         color: 'rgb(187,144,41)',
-        fontSize: '1rem',
+        fontSize: '3xs',
         fontWeight: 'bold',
         textTransform: 'uppercase',
     },

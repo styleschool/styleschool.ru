@@ -30,20 +30,20 @@ export function Vk(props:any) {
 export function Telegram(props:any) {
   return (
     <svg width={props.size || 24} height={props.size || 24} viewBox="0 0 256 256"  >
-    <g transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)">
-    <path 
-      d="M 70.084 20.998 l -51.376 19.81 c -3.507 1.407 -3.486 3.363 -0.639 4.235 l 13.182 4.115 l 4.534 14.921 c 0.596 1.645 0.302 2.298 2.03 2.298 c 1.333 0 1.922 -0.61 2.667 -1.333 l 6.406 -6.229 l 13.328 9.847 c 2.453 1.353 4.223 0.652 4.834 -2.277 l 8.749 -41.23 C 74.695 21.562 72.431 19.933 70.084 20.998 z M 42.262 52.598 l -4.388 9.813 l -4.348 -14.309 l 33.469 -19.856 L 42.262 52.598 z"
-      strokeWidth={props.width || "1.5"}
-      strokeDasharray="none"
-      stroke="none"
-      strokeLinecap="butt"
-      strokeLinejoin="miter"
-      strokeMiterlimit="10"
-      fill="black"
-      fillRule="nonzero"
-      opacity="1"
-    />
-  </g>
+      <g transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)">
+        <path 
+          d="M 70.084 20.998 l -51.376 19.81 c -3.507 1.407 -3.486 3.363 -0.639 4.235 l 13.182 4.115 l 4.534 14.921 c 0.596 1.645 0.302 2.298 2.03 2.298 c 1.333 0 1.922 -0.61 2.667 -1.333 l 6.406 -6.229 l 13.328 9.847 c 2.453 1.353 4.223 0.652 4.834 -2.277 l 8.749 -41.23 C 74.695 21.562 72.431 19.933 70.084 20.998 z M 42.262 52.598 l -4.388 9.813 l -4.348 -14.309 l 33.469 -19.856 L 42.262 52.598 z"
+          strokeWidth={props.width || "1.5"}
+          strokeDasharray="none"
+          stroke="none"
+          strokeLinecap="butt"
+          strokeLinejoin="miter"
+          strokeMiterlimit="10"
+          fill="black"
+          fillRule="nonzero"
+          opacity="1"
+        />
+      </g>
     </svg>
   );
 }
