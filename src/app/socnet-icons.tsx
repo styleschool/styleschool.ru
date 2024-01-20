@@ -27,6 +27,60 @@ export function Vk(props:any) {
   );
 }
 
+export function Telegram(props:any) {
+  return (
+    <svg width={props.size || 24} height={props.size || 24} viewBox="0 0 256 256"  >
+    <g transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)">
+    <path 
+      d="M 70.084 20.998 l -51.376 19.81 c -3.507 1.407 -3.486 3.363 -0.639 4.235 l 13.182 4.115 l 4.534 14.921 c 0.596 1.645 0.302 2.298 2.03 2.298 c 1.333 0 1.922 -0.61 2.667 -1.333 l 6.406 -6.229 l 13.328 9.847 c 2.453 1.353 4.223 0.652 4.834 -2.277 l 8.749 -41.23 C 74.695 21.562 72.431 19.933 70.084 20.998 z M 42.262 52.598 l -4.388 9.813 l -4.348 -14.309 l 33.469 -19.856 L 42.262 52.598 z"
+      strokeWidth={props.width || "1.5"}
+      strokeDasharray="none"
+      stroke="none"
+      strokeLinecap="butt"
+      strokeLinejoin="miter"
+      strokeMiterlimit="10"
+      fill="black"
+      fillRule="nonzero"
+      opacity="1"
+    />
+  </g>
+    </svg>
+  );
+}
+
+export function Whatsapp(props:any) {
+  return (
+    <svg width={props.size || 24} height={props.size || 24} viewBox="0 0 256 256"  >
+    <g transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)">
+    <path       
+      strokeWidth={props.width || "1.5"}
+      strokeDasharray="none"
+      stroke="none"
+      strokeLinecap="butt"
+      strokeLinejoin="miter"
+      strokeMiterlimit="10"
+      fill="black"
+      fillRule="nonzero"
+      opacity="1"
+      d="M 0.576 44.596 C 0.573 52.456 2.626 60.129 6.53 66.892 L 0.201 90 l 23.65 -6.201 c 6.516 3.553 13.852 5.426 21.318 5.429 h 0.019 c 24.586 0 44.601 -20.009 44.612 -44.597 c 0.004 -11.917 -4.633 -23.122 -13.055 -31.552 C 68.321 4.65 57.121 0.005 45.188 0 C 20.597 0 0.585 20.005 0.575 44.595 M 14.658 65.727 l -0.883 -1.402 c -3.712 -5.902 -5.671 -12.723 -5.669 -19.726 C 8.115 24.161 24.748 7.532 45.201 7.532 c 9.905 0.004 19.213 3.865 26.215 10.871 c 7.001 7.006 10.854 16.32 10.851 26.224 c -0.009 20.439 -16.643 37.068 -37.08 37.068 h -0.015 c -6.655 -0.004 -13.181 -1.79 -18.872 -5.168 l -1.355 -0.803 l -14.035 3.68 L 14.658 65.727 z M 45.188 89.228 L 45.188 89.228 L 45.188 89.228 C 45.187 89.228 45.187 89.228 45.188 89.228"
+    />
+    <path 
+      d="M 34.038 25.95 c -0.835 -1.856 -1.714 -1.894 -2.508 -1.926 c -0.65 -0.028 -1.394 -0.026 -2.136 -0.026 c -0.744 0 -1.951 0.279 -2.972 1.394 c -1.022 1.116 -3.902 3.812 -3.902 9.296 c 0 5.485 3.995 10.784 4.551 11.529 c 0.558 0.743 7.712 12.357 19.041 16.825 c 9.416 3.713 11.333 2.975 13.376 2.789 c 2.044 -0.186 6.595 -2.696 7.524 -5.299 c 0.929 -2.603 0.929 -4.834 0.651 -5.299 c -0.279 -0.465 -1.022 -0.744 -2.137 -1.301 c -1.115 -0.558 -6.595 -3.254 -7.617 -3.626 c -1.022 -0.372 -1.765 -0.557 -2.509 0.559 c -0.743 1.115 -2.878 3.625 -3.528 4.368 c -0.65 0.745 -1.301 0.838 -2.415 0.28 c -1.115 -0.559 -4.705 -1.735 -8.964 -5.532 c -3.314 -2.955 -5.551 -6.603 -6.201 -7.719 c -0.65 -1.115 -0.069 -1.718 0.489 -2.274 c 0.501 -0.499 1.115 -1.301 1.673 -1.952 c 0.556 -0.651 0.742 -1.116 1.113 -1.859 c 0.372 -0.744 0.186 -1.395 -0.093 -1.953 C 37.195 33.666 35.029 28.154 34.038 25.95"
+      strokeWidth={props.width || "1.5"}
+      strokeDasharray="none"
+      stroke="none"
+      strokeLinecap="butt"
+      strokeLinejoin="miter"
+      strokeMiterlimit="10"
+      fill="black"
+      fillRule="nonzero"
+      opacity="1"
+    />
+  </g>
+    </svg>
+  );
+}
+
 export function Facebook(props:any) {
   return (
     <svg width={props.size || 24} height={props.size || 24} viewBox="0 0 24 24">
@@ -125,20 +179,28 @@ function SocNetIcons(props: any) {
         }
       }}
     >
+
+      <a href="https://t.me/styleschoolru" target="_blank">
+        <Telegram
+          color={props.color || "black"}
+          size={props.size || "24px"}
+          width="1.2"
+        />
+      </a>
       {/*<a href="https://www.instagram.com/styleschool_msk/" target="_blank">
         <Instagram
           color={props.color || "rgb(200,200,200)"}
           size={props.size / 1.5 || "16px"}
         />
       </a>*/}
-      <a href="https://imagemakerpro.ru" target="_blank">
+      {/* <a href="https://imagemakerpro.ru" target="_blank">
         <Image
           src="regicon.png"
           height="18"
           width="18"
           alt="ВШСДТ"
         />
-      </a>
+      </a> */}
       
       <a href="https://vk.com/stylemsk" target="_blank">
         <Vk
@@ -164,7 +226,7 @@ function SocNetIcons(props: any) {
           size={props.size / 1.2 || "20px"}
         />
       </a>
-      
+{/*       
       <a href="https://rutube.ru/channel/23668241/" target="_blank">
         <Rutube
           color={props.color || "rgb(200,200,200)"}
@@ -179,7 +241,7 @@ function SocNetIcons(props: any) {
           width="18"
           alt="Open AI"
         />
-      </a>
+      </a> */}
       {/* 
       <Image
         src="Image/root-test2/vshsdt.png"

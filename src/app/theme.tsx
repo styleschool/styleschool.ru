@@ -36,7 +36,7 @@ const themeChakra = extendTheme({
     global: (props: StyleFunctionProps) => ({
       'body': {
         color: mode('gray.900', 'whiteAlpha.900')(props),
-        bg: mode('gray.100', 'cyDark')(props),
+        bg: '#FFFFFF',
       },
     }),
   },
@@ -198,7 +198,7 @@ const themeChakra = extendTheme({
         fontSize: '3xs',
         lineHeight: '1.5',
         fontWeight: 'regular',
-        color: 'white',
+        color: 'black',
     },
     footerTitle: {
         color: 'rgb(187,144,41)',
@@ -211,6 +211,9 @@ const themeChakra = extendTheme({
         lineHeight: '1.5',
         fontWeight: 'regular',
         color: 'rgb(160,160,160)',
+    },
+    redParts: {
+      color: '#7D0101'
     },
     body: {
       fontSize: 'xs',
