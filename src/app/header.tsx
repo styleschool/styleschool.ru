@@ -8,7 +8,7 @@ export default function Header(props: any) {
       <Flex direction="row" align="center" height="35" bg="#F9F9F9" color="black">
         <HamburgerIcon w={10} h={10} p="0.5rem"/>
         <Text>меню</Text>
-        <Text m="auto">{props?.name ? 'ВШСДТ • ' + props?.name : 'ВШСДТ'}</Text>
+        <Text m="auto">{props?.page ? 'ВШСДТ • ' + props?.page : 'ВШСДТ'}</Text>
         <LockIcon w={10} h={10} p="0.5rem"/>
       </Flex>
   )

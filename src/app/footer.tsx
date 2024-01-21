@@ -4,7 +4,7 @@ import { Box, Flex, HStack, ListItem, Stack, Text, UnorderedList, useMediaQuery 
 import { PiTelegramLogoThin, PiWhatsappLogoThin, PiYoutubeLogoThin } from "react-icons/pi";
 import { SlSocialVkontakte } from "react-icons/sl";
 import { SocialButton } from "./buttons/social-button";
-import { StyledLink } from './footer-link';
+import { StyledLink, HoveredStyledLink } from './footer-link';
 import { IconProvider } from "./icon-provider";
 import { SocialIcon } from './buttons/social-icon';
 
@@ -13,20 +13,6 @@ const font = "Alegreya Sans";
 
 const TextTitle = ({text, textStyles = 'footerTitle', textProps }:{text: string; textStyles?: string; textProps?: any}) => {
   return <Text textStyle={textStyles} {...textProps}>{text}</Text>
-}
-
-const HoveredStyledLink = ({text}:{text: string}) => {
-  return (<StyledLink 
-    textProps={{
-      sx: {
-        textDecoration: 'underline',
-        _hover: {
-          textDecoration: 'none',
-          color: 'rgb(87,143,163)'
-        }
-      }
-    }}
-    href="/network-educational-programs" text={text} />)
 }
 
 export default function Footer(props: any) {
@@ -280,34 +266,34 @@ export default function Footer(props: any) {
           </Flex>
           <HStack mb="1rem" spacing="0.4rem"  sx={{flexWrap: 'wrap'}}>
             <Text sx={{textTransform: 'uppercase', color: 'black'}}>ТЕГИ</Text>
-            <HoveredStyledLink text="#аналитик" />
-            <HoveredStyledLink text="#бесплатные" />
-            <HoveredStyledLink text="#бизнес" />
-            <HoveredStyledLink text="#бренд" />
-            <HoveredStyledLink text="#город" />
-            <HoveredStyledLink text="#графический" />
-            <HoveredStyledLink text="#дизайн" />
-            <HoveredStyledLink text="#дизайнер" />
-            <HoveredStyledLink text="#дом" />
-            <HoveredStyledLink text="#имидж" />
-            <HoveredStyledLink text="#имиджмейкер" />
-            <HoveredStyledLink text="#индустрия" />
-            <HoveredStyledLink text="#интеллект" />
-            <HoveredStyledLink text="#интерьер" />
-            <HoveredStyledLink text="#контент" />
-            <HoveredStyledLink text="#личный" />
-            <HoveredStyledLink text="#менеджер" />
-            <HoveredStyledLink text="#мода" />
-            <HoveredStyledLink text="#модные" />
-            <HoveredStyledLink text="#нейросети" />
-            <HoveredStyledLink text="#одежда" />
-            <HoveredStyledLink text="#продукт" />
-            <HoveredStyledLink text="#профессия" />
-            <HoveredStyledLink text="#репутация" />
-            <HoveredStyledLink text="#среда" />
-            <HoveredStyledLink text="#стилист" />
-            <HoveredStyledLink text="#стиль" />
-            <HoveredStyledLink text="#управление" />
+            <HoveredStyledLink href="#" text="#аналитик" />
+            <HoveredStyledLink href="#" text="#бесплатные" />
+            <HoveredStyledLink href="#" text="#бизнес" />
+            <HoveredStyledLink href="#" text="#бренд" />
+            <HoveredStyledLink href="#" text="#город" />
+            <HoveredStyledLink href="#" text="#графический" />
+            <HoveredStyledLink href="#" text="#дизайн" />
+            <HoveredStyledLink href="#" text="#дизайнер" />
+            <HoveredStyledLink href="#" text="#дом" />
+            <HoveredStyledLink href="#" text="#имидж" />
+            <HoveredStyledLink href="#" text="#имиджмейкер" />
+            <HoveredStyledLink href="#" text="#индустрия" />
+            <HoveredStyledLink href="#" text="#интеллект" />
+            <HoveredStyledLink href="#" text="#интерьер" />
+            <HoveredStyledLink href="#" text="#контент" />
+            <HoveredStyledLink href="#" text="#личный" />
+            <HoveredStyledLink href="#" text="#менеджер" />
+            <HoveredStyledLink href="#" text="#мода" />
+            <HoveredStyledLink href="#" text="#модные" />
+            <HoveredStyledLink href="#" text="#нейросети" />
+            <HoveredStyledLink href="#" text="#одежда" />
+            <HoveredStyledLink href="#" text="#продукт" />
+            <HoveredStyledLink href="#" text="#профессия" />
+            <HoveredStyledLink href="#" text="#репутация" />
+            <HoveredStyledLink href="#" text="#среда" />
+            <HoveredStyledLink href="#" text="#стилист" />
+            <HoveredStyledLink href="#" text="#стиль" />
+            <HoveredStyledLink href="#" text="#управление" />
           </HStack>
           <Box w="100%">
             <Text textStyle="footerText" align="center">&copy;&emsp;ВШСДТ 2011-2021 Российское академическое онлайн
