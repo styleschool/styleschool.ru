@@ -6,27 +6,10 @@ import Paragraph from "./paragraph";
 import List from "./list";
 import SocNetIcons from "./socnet-icons";
 import { Telegram, Whatsapp } from "./socnet-icons";
-import { StyledLink } from './footer-link';
-
-
-const font = "Alegreya Sans";
+import { StyledLink, HoveredStyledLink } from './footer-link';
 
 const TextTitle = ({text}:{text: string}) => {
   return <Text textStyle="footerTitle">{text}</Text>
-}
-
-const HoveredStyledLink = ({text}:{text: string}) => {
-  return (<StyledLink 
-    textProps={{
-      sx: {
-        textDecoration: 'underline',
-        _hover: {
-          textDecoration: 'none',
-          color: 'rgb(87,143,163)'
-        }
-      }
-    }}
-    href="/network-educational-programs">{text}</StyledLink>)
 }
 
 export default function Footer(props: any) {

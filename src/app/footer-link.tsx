@@ -24,3 +24,18 @@ export const StyledLink = ({children, href="#", textStyles = 'footerText', textP
       <Text textStyle={textStyles} {...textProps}>{children}</Text>
   </Link>;
 };
+
+
+export const HoveredStyledLink = ({text, url}:{text: string; url: string}) => {
+  return (<StyledLink 
+    textProps={{
+      sx: {
+        textDecoration: 'underline',
+        _hover: {
+          textDecoration: 'none',
+          color: 'rgb(87,143,163)'
+        }
+      }
+    }}
+    href={url}>{text}</StyledLink>)
+}
