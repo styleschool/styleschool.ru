@@ -1,6 +1,6 @@
 'use client';
 
-import { Flex, VStack, } from '@chakra-ui/react';
+import { Flex, VStack, useMediaQuery } from '@chakra-ui/react';
 
 import Footer from '../footer';
 import EducationCard from './education-card';
@@ -87,12 +87,13 @@ const courses = [
 ];
 
 export default function Home() {
+  const [isMax959] = useMediaQuery('(max-width: 959px)')
   return (
   <Flex direction="column">
     <Header page="Коммерческое образование"/>
-    <VStack align="center" p="3rem 6rem" spacing="2rem">
+    <VStack align="center" p={isMax959 ? 0 : "3rem 6rem"} spacing="2rem">
       { courses.map((course, i)=> <EducationCard key={i} {...course} /> ) }
-      </VStack>
+    </VStack>
     <Footer/>
   </Flex>
   )

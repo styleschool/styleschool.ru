@@ -2,14 +2,13 @@
 
 import React from 'react';
 import { HamburgerIcon, LockIcon } from '@chakra-ui/icons'
-import { Flex, Drawer, DrawerOverlay, DrawerContent, DrawerCloseButton, DrawerHeader, DrawerBody, IconButton, Box, useMediaQuery, useDisclosure } from '@chakra-ui/react'
+import { useMediaQuery, Flex, Drawer, DrawerOverlay, DrawerContent, DrawerCloseButton, DrawerHeader, DrawerBody, IconButton, Box, useDisclosure } from '@chakra-ui/react'
 
 export default function Header(props: any) {
   const [isMax959] = useMediaQuery('(max-width: 959px)')
   const { isOpen, onOpen, onClose } = useDisclosure()
-  const btnRef = React.useRef()
   return (
-      <Flex direction="row" align="center" height="35" bg="#F9F9F9" color="black" p="2rem 6rem">
+      <Flex direction="row" align="center" height="35" bg="#F9F9F9" color="black" p={isMax959 ? 0 : "2rem 6rem"}>
         <IconButton aria-label='menu' icon={<HamburgerIcon />} onClick={onOpen}></IconButton>
         <Box m="0 auto"><a href="/">ВШСДТ</a>{props?.page ? ' • ' + props?.page : ''}</Box>
         <LockIcon w={10} h={10} p="0.5rem"/>
