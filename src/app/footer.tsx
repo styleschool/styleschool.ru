@@ -24,6 +24,8 @@ export default function Footer(props: any) {
         <Flex 
           direction={isMax628 ?'column' : "row"} 
           justify="space-between"
+          alignContent="center"
+          flexWrap="wrap"
           mb="0.5rem" 
           sx={{
             '& > *:not(:last-child)': {
