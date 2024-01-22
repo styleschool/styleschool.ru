@@ -1,40 +1,98 @@
 'use client';
 
-import { Flex, VStack, HStack, Box, Text } from '@chakra-ui/react';
+import { Flex, VStack, useMediaQuery } from '@chakra-ui/react';
 
 import Footer from '../footer';
-import { HoveredStyledLink } from '../footer-link';
+import EducationCard from './education-card';
 import Header from '../header';
-import Image from 'next/image';
+
+const courses = [
+  {
+    tags: [
+      { text: 'нейросети', href: '#' },
+      { text: 'дизайн', href: '#'},
+      { text: 'стиль', href: '#'},
+      { text: 'мода', href: '#'},
+      { text: 'дизайнер', href: '#'},
+      { text: 'стилист', href: '#'}
+    ],
+    title: 'Нейросети для дизайнеров и стилистов (3 месяца)',
+    level: 'ИИ и нейросети, 1 ступень',
+    profession: 'контент менеджер, промпт инженер',
+    document: 'удостоверение о повышении квалификации'
+  },
+  {
+    tags: [
+      { text: 'имидж', href: '#' },
+      { text: 'стиль', href: '#'},
+      { text: 'модные', href: '#'},
+      { text: 'одежда', href: '#'},
+      { text: 'бесплатно', href: '#'}
+    ],
+    title: 'Консультант по стилю (2 месяца)',
+    level: 'Имидж и стиль, 1 ступень',
+    profession: 'консультант по имиджу и стилю, шопер',
+    document: 'удостоверение о повышении квалификации гос.ВУЗа'
+  },
+  {
+    tags: [
+      { text: 'дизайн', href: '#' },
+      { text: 'интерьер', href: '#'},
+      { text: 'среда', href: '#'},
+      { text: 'дом', href: '#'},
+      { text: 'бесплатно', href: '#'}
+    ],
+    title: 'Дизайн интерьера (2 месяца)',
+    level: 'Дизайн среды, 1 ступень',
+    profession: 'консультант по дизайну интерьера',
+    document: 'удостоверение о повышении квалификации гос.ВУЗа'
+  },
+  {
+    tags: [
+      { text: 'стилист', href: '#' },
+      { text: 'мода', href: '#'},
+      { text: 'нейросети', href: '#'},
+      { text: 'профессия', href: '#'},
+    ],
+    title: 'Стилист в индустрии моды. Fashion стилист (4 месяца)',
+    level: 'Имидж и стиль, 2 ступень',
+    profession: 'стилист, стилист фотосессий, fashion стилист',
+    document: 'диплом о профпереподготовке гос.ВУЗа'
+  },
+  {
+    tags: [
+      { text: 'дизайнер', href: '#' },
+      { text: 'интерьер', href: '#'},
+      { text: 'среда', href: '#'},
+      { text: 'нейросети', href: '#'},
+      { text: 'профессия', href: '#'},
+    ],
+    title: 'Интерьерный стилист (4 месяца)',
+    level: 'Дизайн среды, 2 ступень',
+    profession: 'интерьерный стилист, дизайнер интерьера',
+    document: 'диплом о профпереподготовке гос.ВУЗа'
+  },
+  {
+    tags: [
+      { text: 'нейросети', href: '#' },
+      { text: 'интеллект', href: '#'},
+      { text: 'продукт', href: '#'},
+      { text: 'управление', href: '#'},
+      { text: 'профессия', href: '#'},
+    ],
+    title: 'AI продукт менеджер: создание продуктов с использованием нейросетей (2 месяца)',
+    level: 'Управление продуктом, 1 ступень',
+    profession: 'Менеджер по продукту',
+  }
+];
 
 export default function Home() {
+  const [isMax959] = useMediaQuery('(max-width: 959px)')
   return (
   <Flex direction="column">
     <Header page="Коммерческое образование"/>
-    <VStack align="center" p="1.5rem">
-      <Box borderWidth='2px' borderRadius='lg'  w='70%' p={4}>
-        <Flex direction="row">
-          <Flex direction="column">
-            <HStack mb="1rem" spacing="1rem"  sx={{flexWrap: 'wrap'}}>
-              <HoveredStyledLink url="#" text="#нейросети" />
-              <HoveredStyledLink url="#" text="#дизайн" />
-              <HoveredStyledLink url="#" text="#стиль" />
-              <HoveredStyledLink url="#" text="мода" />
-              <HoveredStyledLink url="#" text="дизайнер" />
-              <HoveredStyledLink url="#" text="стилист" />
-            </HStack>
-            <Text textStyle="h4">Курс: Нейросети для дизайнеров и стилистов (3 месяца)</Text>
-            <VStack align="left" p="1.5rem">
-              <Text>Уровень: ИИ и нейросети, 1 ступень</Text>
-              <Text>Профессия: контент менеджер, промпт инженер</Text>
-              <Text>Документ: удостоверение о повышении квалификации</Text>
-            </VStack>
-          </Flex>
-          <Flex direction="column">
-            <Image src="Group_72.jpg" width='100' height="100" alt="logo" />
-          </Flex>
-        </Flex>  
-      </Box>
+    <VStack align="center" p={isMax959 ? 0 : "3rem 6rem"} spacing="2rem">
+      { courses.map((course, i)=> <EducationCard key={i} {...course} /> ) }
     </VStack>
     <Footer/>
   </Flex>
