@@ -32,7 +32,8 @@ const courses = [
     title: 'Консультант по стилю (2 месяца)',
     level: 'Имидж и стиль, 1 ступень',
     profession: 'консультант по имиджу и стилю, шопер',
-    document: 'удостоверение о повышении квалификации гос.ВУЗа'
+    document: 'удостоверение о повышении квалификации гос.ВУЗа',
+    link: 'education/style-consultant'
   },
   {
     tags: [
@@ -90,7 +91,7 @@ export default function Home() {
   const [isMax959] = useMediaQuery('(max-width: 959px)')
   return (
   <Flex direction="column">
-    <Header page="Коммерческое образование"/>
+    <Header breadcrumbs={[{text: 'Коммерческое образование'}]}/>
     <VStack align="center" p={isMax959 ? 0 : "3rem 6rem"} spacing="2rem">
       { courses.map((course, i)=> <EducationCard key={i} {...course} /> ) }
     </VStack>

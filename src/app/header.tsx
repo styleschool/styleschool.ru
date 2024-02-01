@@ -3,6 +3,12 @@
 import React from 'react';
 import { HamburgerIcon, LockIcon } from '@chakra-ui/icons'
 import { useMediaQuery, Flex, Drawer, DrawerOverlay, DrawerContent, DrawerCloseButton, DrawerHeader, DrawerBody, IconButton, Box, useDisclosure } from '@chakra-ui/react'
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbSeparator,
+} from '@chakra-ui/react'
 
 export default function Header(props: any) {
   const [isMax959] = useMediaQuery('(max-width: 959px)')
@@ -10,7 +16,15 @@ export default function Header(props: any) {
   return (
       <Flex direction="row" align="center" height="35" bg="#F9F9F9" color="black" p={isMax959 ? 0 : "2rem 6rem"}>
         <IconButton aria-label='menu' icon={<HamburgerIcon />} onClick={onOpen}></IconButton>
-        <Box m="0 auto"><a href="/">ВШСДТ</a>{props?.page ? ' • ' + props?.page : ''}</Box>
+        <Box color="secondary" m="0 auto">
+          <Breadcrumb>
+            <BreadcrumbItem>
+              <BreadcrumbLink href='/'>ВШСДТ</BreadcrumbLink>
+            </BreadcrumbItem>
+            {props?.breadcrumbs ? props?.breadcrumbs.map((crumb, i) => <BreadcrumbItem key={i} isCurrentPage={props?.breadcrumbs.length === i+1}><BreadcrumbLink href={crumb.link}>{crumb.text}</BreadcrumbLink></BreadcrumbItem>)
+            : ''}
+          </Breadcrumb>
+        </Box>
         <LockIcon w={10} h={10} p="0.5rem"/>
         <Drawer placement="left" onClose={onClose} isOpen={isOpen} size="md">
           <DrawerOverlay />
