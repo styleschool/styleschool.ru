@@ -21,8 +21,7 @@ export default function Header(props: any) {
             <BreadcrumbItem>
               <BreadcrumbLink href='/'>ВШСДТ</BreadcrumbLink>
             </BreadcrumbItem>
-            {props?.breadcrumbs ? props?.breadcrumbs.map((crumb, i) => <BreadcrumbItem key={i} isCurrentPage={props?.breadcrumbs.length === i+1}><BreadcrumbLink href={crumb.link}>{crumb.text}</BreadcrumbLink></BreadcrumbItem>)
-            : ''}
+            {props?.breadcrumbs ? props?.breadcrumbs.map((crumb:{text: string; link: string}, i:number) => <BreadcrumbItem key={i} isCurrentPage={props?.breadcrumbs.length === i+1}><BreadcrumbLink href={crumb.link}>{crumb.text}</BreadcrumbLink></BreadcrumbItem>) : ''}
           </Breadcrumb>
         </Box>
         <LockIcon w={10} h={10} p="0.5rem"/>
