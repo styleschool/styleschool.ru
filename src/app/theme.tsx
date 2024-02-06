@@ -196,6 +196,13 @@ const themeChakra = extendTheme({
       color: 'text',
       fontStyle: 'italic',
     },
+    Light30: {
+      fontSize: '4xl',
+      lineHeight: '1.2',
+      fontWeight: 'light',
+      color: 'text',
+      fontStyle: 'italic',
+    },
 
     footerText: {
       fontSize: '3xs',

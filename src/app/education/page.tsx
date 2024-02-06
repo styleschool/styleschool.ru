@@ -97,7 +97,7 @@ export default function Home() {
   return (
   <Flex direction="column">
     <Header breadcrumbs={[{text: 'Коммерческое образование'}]}/>
-    <VStack align="center" p={isMax959 ? 0 : "3rem 6rem"} spacing="2rem">
+    <VStack align="center" p={isMax959 ? "1rem 1rem" : "3rem 6rem"} spacing="2rem">
       { courses.map((course, i)=> <EducationCard key={i} {...course} /> ) }
     </VStack>
     <Footer/>
