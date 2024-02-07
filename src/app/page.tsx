@@ -25,7 +25,7 @@ export default function Home() {
         <Box p="1rem">
           <Text>Профессиональная переподготовка</Text>
           <Text>и повышение квалификации</Text>
-          <Text>креативных индустриях</Text>
+          <Text>в креативных индустриях</Text>
         </Box>
       </Flex>
       <Flex direction="column">

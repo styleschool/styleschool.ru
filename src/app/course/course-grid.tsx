@@ -2,49 +2,46 @@ import { Box, Flex, HStack, List, ListItem, Text, UnorderedList, VStack, useMedi
 import { memo, use } from "react"
 import { HoveredStyledLink } from "../footer-link";
 import { RedSquareTitle } from "./components/red-square-title";
-import { styleConsultantListCourseReview, styleConsultantListProgram1 } from "./course-data";
 import { TextContainer } from "./components/text-container";
 import { TextDescription } from "./components/text-description";
-import { UnorderList } from "./components/list-items";
+import { PointList } from "./components/list-items";
 
-const tags = [
-  {
-    id: 'program',
-    text: '#Программа',
-  },
-  {
-    id: 'teachers',
-    text: '#Преподователи',
-  },
-  {
-    id: 'cost',
-    text: '#Стоимость',
-  }
-]
 
 export const CourseGrid = memo(function CourseGrid(props: any) {
-  const [isMax628] = useMediaQuery('(max-width: 628px)');
+  const [isMax667] = useMediaQuery('(max-width: 628px)');
+  const [isMax959] = useMediaQuery('(max-width: 959px)')
+  const { 
+    title1, title2, description, details,
+    tags, startDate, duration, points } = props;
   return (<>
-      <Flex direction="column" w="100%" p="3rem 6rem">
-        <Flex dir={isMax628 ? 'column' : 'row'} justify={isMax628 ? 'flex-start' : 'space-between'} mb="sm">
-          <TextContainer direction="row" alignItems="flex-end" justify="flex-start" width={isMax628 ? '100%' : '50%'} mb={0} alignSelf='unset'>
+      <Flex direction="column" w="100%" p={isMax959 ? '1rem 2rem' : "3rem 6rem"}>
+        <Flex direction={isMax959 ? 'column' : 'row'} justify={isMax959 ? 'flex-start' : 'space-between'} mb="sm">
+          <TextContainer direction="row" alignItems="flex-end" justify="flex-start" width={isMax959 ? '100%' : '50%'} mb={0} alignSelf='unset'>
 
-            <Box w="xs" h="100%" mr="2rem">
+            { !isMax667 ? <Box w="xs" h="100%" mr="2rem">
               <Box w="xs" h="xs" bg='secondary' />
-            </Box>
+            </Box> : null }
 
             <VStack align="flex-start" w="calc(100% - 2rem)" >
-              <Text as="h1" textStyle="h1">Консультант по стилю</Text>
-              <Text as="h2" textStyle="h2" mb="xs">Быстрый старт</Text>
-              <TextDescription 
+              <Text as="h1" textStyle="h1">{title1}</Text>
+              <Text as="h2" textStyle="h2" mb="xs">{title2}</Text>
+              <TextDescription
                 mb={0} 
-                text="В этом курсе мы собрали самые нужные знания, чтобы вы могли учиться с нуля, в любом возрасте, в любом городе, получая нужный результат: для себя, для карьеры дипломированного стилиста, для бизнеса."
+                text={description}
               />
-              <HStack spacing={isMax628 ? "0.5rem" : "1.5rem"}>
+              <HStack spacing={isMax959 ? "0.5rem" : "1.5rem"} mb={isMax959 ? 'md' : undefined}>
                 {tags.map((tag, i) => (
                   <HoveredStyledLink key={i} text={tag.text} href={`#${tag.id}`} />
                 ))}
               </HStack>
+              {
+                details && details.length ? details.map((text, i) => 
+                <TextDescription 
+                  key={i}
+                  mb={0} 
+                  text={text}
+                />) : null
+              }
             </VStack>
           </TextContainer>
           <VStack justify="center" align="flex-start">
@@ -57,7 +54,7 @@ export const CourseGrid = memo(function CourseGrid(props: any) {
                   fontWeight: 'bold',
                 }
               }}
-            >Старт: 20 февраля 2024г.</Text>
+            >Старт: {startDate}.</Text>
             <Text as="h4"
               textStyle="Regular28"
               sx={{
@@ -66,7 +63,7 @@ export const CourseGrid = memo(function CourseGrid(props: any) {
                   fontWeight: 'bold',
                 }
               }}
-            >Длительность: 2 месяца</Text>
+            >Длительность: {duration}.</Text>
           </VStack>
         </Flex>
       </Flex>
@@ -75,129 +72,48 @@ export const CourseGrid = memo(function CourseGrid(props: any) {
         // здесь расположить картинку
       </Box>
 
-      <Flex direction="column" w="100%" p="3rem 6rem">
-        <RedSquareTitle>
-          <Flex direction="column" align="flex-start">
-            <Text as="h2" textStyle="Light20">1 ступень  - быстрый старт</Text>
-            <Text as="h2" textStyle="Bold20" mb="1rem">консультант по стилю</Text>
-          </Flex>
-        </RedSquareTitle>
-
-        <TextContainer>
-          <TextDescription mb="md" 
-            text="Первый шаг в мир профессиональных возможностей. Участники овладевают ключевыми этапами создания индивидуального стиля в одежде, детально разбирая каждый аспект. Командная работа под руководством опытных преподавателей обеспечивает постоянный прогресс." />
-
-          <Flex direction={isMax628 ? "column" : "row"} mb="md">
-            <Flex direction="column" alignItems="flex-start" justify="flex-start" w={isMax628 ? '100%' : '50%'} mr={isMax628 ? 0 : '2rem'}>
-              <HStack spacing={isMax628 ? '0.5rem' : '1rem'} mb="xs">
-                <Text textStyle="Bold16">Длительность:</Text>
-                <TextDescription mb={0} text="8 недель" />
-              </HStack>
-              <HStack spacing={isMax628 ? '0.5rem' : '1rem'} mb="xs">
-                <Text textStyle="Bold16">Категория слушателей:</Text>
-                <TextDescription mb={0} text="без ограничений" />
-              </HStack>
-              <HStack spacing={isMax628 ? '0.5rem' : '1rem'} mb="xs">
-                <Text textStyle="Bold16">Требования при поступлении:</Text>
-                <TextDescription mb={0} text="нет" />
-              </HStack>
-              <HStack spacing={isMax628 ? '0.5rem' : '1rem'} mb="xs">
-                <Text textStyle="Bold16">Образовательная траектория:</Text>
-                <TextDescription mb={0} text="мода и стиль, 1 уровень" />
-              </HStack>
-              <TextDescription mb={0} text="Документ об образовании ведущего государственного ВУЗа" />
+        { points && points.length ? points.map((point, i) => <Box key={i}>
+        <Flex direction="column" w="100%"  p={isMax959 ? '1rem 2rem' : "3rem 6rem"}>
+          <RedSquareTitle id={point.id} displayRed={ !isMax667 ? true : false }>
+            <Flex direction="column" align="flex-start">
+              { point.title ? <Text as="h2" textStyle="Light20">{point.title}</Text> : null }
+              { point.title2 ? <Text as="h2" textStyle="Bold20" mb="1rem">{point.title2}</Text> : null }
             </Flex>
-            <Flex direction="column" alignItems="flex-start" justify="flex-start" w={isMax628 ? '100%' : '50%'}>
-              <HStack spacing={isMax628 ? '0.5rem' : '1rem'} mb="xs">
-                <Text textStyle="Bold16">Стоимость курса:</Text>
-                <TextDescription mb={0} text="50 000 ₽, доступна рассрочка" />
-              </HStack>
-              <HStack spacing={isMax628 ? '0.5rem' : '1rem'} mb="xs">
-                <Text textStyle="Bold16">Стоимость для вольных слушателей:</Text>
-                <TextDescription mb={0} text="30 000 ₽" />
-              </HStack>
-              <TextDescription text="Доступно бесплатное обучение в рамках федерального проекта “Содействие занятости”" mb="xs" />
-              <TextDescription mb={0} text="Доступна очно-заочная форма обучения" />
-            </Flex>
-          </Flex>
-
-          <Box position="relative" textAlign="right" mb="md">
-            <Box 
-              w="4rem" h="4rem" 
-              border="thin solid rgb(125,1,1)"
-              borderRadius="50%" 
-              position="absolute" top="-1.5rem" right="3rem" zIndex="1" 
-              _hover={{ transform: 'scale(1.5)' }} 
-              sx={{
-                transition: 'transform 0.5s ease-in-out',
-              }}
-            />
-            <Text textStyle="Bold16">поступление</Text>
-          </Box>
-          <TextDescription 
-            text="Цель курса - передача необходимых технологий и закрепление навыков для успешного старта в профессии консультанта по стилю." />
-
-          <TextDescription mb="sm" 
-            text="В ходе обучения вы получите теоретическую и практическую подготовку, работая с опытными преподавателями. Научитесь применять практические навыки в консультировании клиентов (моделей), учитывая их индивидуальные (физиологические) особенности и модные тренды. Кроме того, у вас будет возможность набрать необходимое количество баллов для поступления на дипломные программы." 
-          />
-
-          <TextDescription mb="sm" 
-            text="Курс реализуется ВШСДТ совместно с Национальным исследовательским Томским государственным университетом с возможностью получения документа об образовании Университета."
-          />
-        </TextContainer>
-
-        <RedSquareTitle alignItems="center" containerMR="sm">
-          <Text as="h2" textStyle="h2">ОБЗОР КУРСА</Text>
-        </RedSquareTitle>
-
-        <TextContainer mb="md">
-
-          <TextDescription 
-            text="Обучение организовано через онлайн формат, включающий 30% видеолекций и 70% практических занятий. Практика включает этапы создания концепции стиля клиента, групповую работу, обсуждение кейсов и анализ ошибок."
-          />
-
-          <TextDescription mb={0}
-            text="Очные практики в Москве реализуются как дополнительная траектория по запросу*" />
-
-          <TextDescription  mb="sm" text="(заключается отдельный договор)" />
-            
-          <TextDescription text="Программа направлена на достижение слушателем следующих результатов обучения:" />
-
-          <UnorderList
-          >
-            {styleConsultantListCourseReview.map(item => (<ListItem key={item.id}>
-              <Text textStyle="Regular16">
-                {item.text}
-              </Text>
-            </ListItem>))}
-          </UnorderList>
-        </TextContainer>
-
-        <RedSquareTitle alignItems="center" containerMR="sm">
-          <Text as="h2" textStyle="h2">ПРОГРАММА КУРСА</Text>
-        </RedSquareTitle>
-
-        <TextContainer>
-          <TextDescription 
-            text="Предлагаемая программа реализуется в формате интенсивного погружения в 4 основных аспекта деятельности консультанта-стилиста: коммуникация, креативное мышление, владение актуальными трендами, осознанное использование имидж-технологий в зависимости от запроса клиента. В курс включены следующие ключевые дисциплины:" 
-          />
-
-          <UnorderList>
-            {styleConsultantListProgram1.map(item => (<ListItem key={item.id}>
-              <Text textStyle="Regular16">
-                {item.text}
-              </Text>
-            </ListItem>))}
-          </UnorderList>
-          <Box height="sm" />
-          <Box>
-            <Text as="span" textStyle="Bold16">Итоговой работой по курсу «Консультант по стилю»</Text>
-            <TextDescription as="span"
-              text={`является проектная работа, которая выполняется командой, представляет разработанный в результате реализации серии практических заданий для потенциального клиента "Книгу стиля" в формате Style book, и содержит разделы:`}
-            />
-          </Box>
-        </TextContainer>
-      </Flex>
+          </RedSquareTitle>
+          <TextContainer>
+            {
+              point.content && point.content.length ? point.content.map((item, i) => 
+              <TextDescription 
+                key={i}
+                mb={item.mb}
+                text={item.text}
+              />) : null
+            }
+            <PointList type={point.list.type} content={point.list.content} isMax959={isMax959}/>
+            { point.button ? <Box position="relative" textAlign="right" mb="md">
+              <Box 
+                w="4rem" h="4rem" 
+                border="thin solid rgb(125,1,1)"
+                borderRadius="50%" 
+                position="absolute" top="-1.5rem" right="3rem" zIndex="1" 
+                _hover={{ transform: 'scale(1.5)' }} 
+                sx={{
+                  transition: 'transform 0.5s ease-in-out',
+                }}
+              />
+              <Text textStyle="Bold16">{point.button}</Text>
+            </Box> : null 
+            }
+            {
+              point.details && point.details.length ? point.details.map((detail, i) => 
+              <TextDescription
+                key={i}
+                text={detail}
+              />) : null
+            }
+          </TextContainer>
+        </Flex>
+        </Box>) : null }
     </>
   )
 })
