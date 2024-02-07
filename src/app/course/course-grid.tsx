@@ -1,7 +1,6 @@
 import { Box, Flex, HStack, List, ListItem, Text, UnorderedList, VStack, useMediaQuery } from "@chakra-ui/react"
 import { memo, use } from "react"
 import { HoveredStyledLink } from "../footer-link";
-import { RedSquareTitle } from "./components/red-square-title";
 import { TextContainer } from "./components/text-container";
 import { TextDescription } from "./components/text-description";
 import { PointList } from "./components/list-items";
@@ -74,13 +73,22 @@ export const CourseGrid = memo(function CourseGrid(props: any) {
 
         { points && points.length ? points.map((point: any, i:number) => <Box key={i}>
         <Flex direction="column" w="100%"  p={isMax959 ? '1rem 2rem' : "3rem 6rem"}>
-          <RedSquareTitle id={point.id} displayRed={ !isMax667 ? true : false }>
+          <Flex direction="row" align="flex-start" mb={'3rem'}>
+            { !isMax667 ? <Box w="xs" h="100%" mr="2rem" id={point.id}>
+              <Box w="xs" h="xs" bg='secondary' />
+            </Box> : null 
+            }
             <Flex direction="column" align="flex-start">
               { point.title ? <Text as="h2" textStyle="Light20">{point.title}</Text> : null }
               { point.title2 ? <Text as="h2" textStyle="Bold20" mb="1rem">{point.title2}</Text> : null }
             </Flex>
-          </RedSquareTitle>
-          <TextContainer>
+          </Flex>
+          <Flex direction='row' justify={'flex-end'} mb="sm" >
+            <TextContainer alignItems="flex-end" justify="flex-start" width={isMax959 ? '100%' : '75%'} mb={0} alignSelf='unset'>
+            
+
+            <VStack align="flex-start" w="calc(100% - 2rem)" >
+
             {
               point.content && point.content.length ? point.content.map((item: {mb: string; text: string}, i: number) => 
               <TextDescription 
@@ -90,7 +98,9 @@ export const CourseGrid = memo(function CourseGrid(props: any) {
               />) : null
             }
             <PointList type={point.list.type} content={point.list.content} isMax959={isMax959}/>
-            { point.button ? <Box position="relative" textAlign="right" mb="md">
+            
+            { point.button ? <Flex direction="row" w="100%" justifyContent="flex-end">
+            <Box position="relative" textAlign="right" mb="md">
               <Box 
                 w="4rem" h="4rem" 
                 border="thin solid rgb(125,1,1)"
@@ -102,7 +112,7 @@ export const CourseGrid = memo(function CourseGrid(props: any) {
                 }}
               />
               <Text textStyle="Bold16">{point.button}</Text>
-            </Box> : null 
+            </Box></Flex> : null 
             }
             {
               point.details && point.details.length ? point.details.map((detail: string, i: number) => 
@@ -111,7 +121,9 @@ export const CourseGrid = memo(function CourseGrid(props: any) {
                 text={detail}
               />) : null
             }
+            </VStack>
           </TextContainer>
+        </Flex>
         </Flex>
         </Box>) : null }
     </>

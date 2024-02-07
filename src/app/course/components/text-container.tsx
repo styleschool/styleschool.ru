@@ -17,8 +17,9 @@ export const TextContainer = memo(({
   [key: string]: any
 }) => {
   const [isMax628] = useMediaQuery('(max-width: 628px)');
+  const [isMax959] = useMediaQuery('(max-width: 959px)');
 
-  return (<Flex direction={direction} w={width ? width :(isMax628 ? '100%' : '70vw')} mb={mb} alignSelf={alignSelf} {...props}>
+  return (<Flex direction={direction} w={width ? width :(isMax959 ? '100%' : '70vw')} mb={mb} alignSelf={alignSelf} {...props}>
       {children}
     </Flex>
   )
