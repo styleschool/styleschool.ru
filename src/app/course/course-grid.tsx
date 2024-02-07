@@ -8,7 +8,7 @@ import { PointList } from "./components/list-items";
 
 
 export const CourseGrid = memo(function CourseGrid(props: any) {
-  const [isMax667] = useMediaQuery('(max-width: 628px)');
+  const [isMax667] = useMediaQuery('(max-width: 667px)');
   const [isMax959] = useMediaQuery('(max-width: 959px)')
   const { 
     title, title2, description, details,
