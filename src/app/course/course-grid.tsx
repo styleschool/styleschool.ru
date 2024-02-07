@@ -11,7 +11,7 @@ export const CourseGrid = memo(function CourseGrid(props: any) {
   const [isMax667] = useMediaQuery('(max-width: 628px)');
   const [isMax959] = useMediaQuery('(max-width: 959px)')
   const { 
-    title1, title2, description, details,
+    title, title2, description, details,
     tags, startDate, duration, points } = props;
   return (<>
       <Flex direction="column" w="100%" p={isMax959 ? '1rem 2rem' : "3rem 6rem"}>
@@ -23,19 +23,19 @@ export const CourseGrid = memo(function CourseGrid(props: any) {
             </Box> : null }
 
             <VStack align="flex-start" w="calc(100% - 2rem)" >
-              <Text as="h1" textStyle="h1">{title1}</Text>
+              <Text as="h1" textStyle="h1">{title}</Text>
               <Text as="h2" textStyle="h2" mb="xs">{title2}</Text>
               <TextDescription
                 mb={0} 
                 text={description}
               />
               <HStack spacing={isMax959 ? "0.5rem" : "1.5rem"} mb={isMax959 ? 'md' : undefined}>
-                {tags.map((tag, i) => (
+                {tags.map((tag: {id: string; text: string}, i: number) => (
                   <HoveredStyledLink key={i} text={tag.text} href={`#${tag.id}`} />
                 ))}
               </HStack>
               {
-                details && details.length ? details.map((text, i) => 
+                details && details.length ? details.map((text: string, i: number) => 
                 <TextDescription 
                   key={i}
                   mb={0} 
@@ -72,7 +72,7 @@ export const CourseGrid = memo(function CourseGrid(props: any) {
         // здесь расположить картинку
       </Box>
 
-        { points && points.length ? points.map((point, i) => <Box key={i}>
+        { points && points.length ? points.map((point: any, i:number) => <Box key={i}>
         <Flex direction="column" w="100%"  p={isMax959 ? '1rem 2rem' : "3rem 6rem"}>
           <RedSquareTitle id={point.id} displayRed={ !isMax667 ? true : false }>
             <Flex direction="column" align="flex-start">
@@ -82,7 +82,7 @@ export const CourseGrid = memo(function CourseGrid(props: any) {
           </RedSquareTitle>
           <TextContainer>
             {
-              point.content && point.content.length ? point.content.map((item, i) => 
+              point.content && point.content.length ? point.content.map((item: {mb: string; text: string}, i: number) => 
               <TextDescription 
                 key={i}
                 mb={item.mb}
@@ -105,7 +105,7 @@ export const CourseGrid = memo(function CourseGrid(props: any) {
             </Box> : null 
             }
             {
-              point.details && point.details.length ? point.details.map((detail, i) => 
+              point.details && point.details.length ? point.details.map((detail: string, i: number) => 
               <TextDescription
                 key={i}
                 text={detail}
