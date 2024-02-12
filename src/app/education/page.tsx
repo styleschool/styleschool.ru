@@ -2,9 +2,9 @@
 
 import { Flex, VStack, useMediaQuery } from '@chakra-ui/react';
 
-import Footer from '../footer';
-import EducationCard from './education-card';
-import Header from '../header';
+import Footer from '../../components/footer';
+import EducationCard from '../../components/education-card';
+import Header from '../../components/header';
 import courses from './courses.json';
 
 export default function Home() {

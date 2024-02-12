@@ -1,9 +1,9 @@
 'use client';
 
 import { Flex, Text, Box, Link } from '@chakra-ui/react';
-import Footer from '../footer';
-import Header from '../header';
-import { PageGrid } from '@/app/course/page-grid';
+import Footer from '../../components/footer';
+import Header from '../../components/header';
+import { PageGrid } from '@/components/page-grid';
 
 import data from "./page-data.json";
 

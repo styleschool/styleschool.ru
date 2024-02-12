@@ -3,9 +3,8 @@
 import { Flex, Text, Box, Link } from '@chakra-ui/react'
 import NextLink from 'next/link'
 import Image from 'next/image';
-import Footer from '../footer';
-import Header from '../header';
-import { useState } from 'react'
+import Footer from '../../components/footer';
+import Header from '../../components/header';
 
 export default function Home() {
   return (

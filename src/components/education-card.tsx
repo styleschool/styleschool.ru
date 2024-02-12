@@ -1,12 +1,11 @@
 
 import { Flex, VStack, HStack, Box, Text, useMediaQuery } from '@chakra-ui/react';
-import { HoveredStyledLink } from '../footer-link';
+import { HoveredStyledLink } from './footer-link';
 import { PiPlayFill } from "react-icons/pi";
-import { IconProvider } from "../icon-provider";
+import { IconProvider } from "./icon-provider";
 import { useRouter } from 'next/navigation'
 
 export default function EducationCard({tags, title, level, profession, document, link='#', key}: {tags: {href: string; text: string}[], title: string; level: string; profession: string; document?: string; key: any; link: string;}) {
-  const [isMax959] = useMediaQuery('(max-width: 959px)');
   const [isMax628] = useMediaQuery('(max-width: 628px)');
   const router = useRouter()
     return (
@@ -15,7 +14,7 @@ export default function EducationCard({tags, title, level, profession, document,
         <Flex direction="column">
           { tags?.length ?
             <HStack mb="1rem" p="1rem 1rem" spacing="1rem"  sx={{flexWrap: 'wrap'}}>
-              { tags.map((tag)=> <HoveredStyledLink key={tag.text} href={tag.href} text={tag.text} />) }
+              { tags.map((tag, i)=> <HoveredStyledLink key={i} href={tag.href} text={tag.text} />) }
             </HStack>
             : null
           }

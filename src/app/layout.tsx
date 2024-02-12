@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { Alegreya_Sans } from 'next/font/google';
 import { ChakraProvider } from '@chakra-ui/react';
-import theme from './theme';
+import theme from '../components/theme';
 
 const alegriya = Alegreya_Sans({ 
   weight: ['300', '400', '500', '700'],

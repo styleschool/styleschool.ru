@@ -1,11 +1,11 @@
 import { Box, Flex, HStack, Text, VStack, useMediaQuery, Link } from '@chakra-ui/react'
 import NextLink from 'next/link'
 import { memo } from "react"
-import { HoveredStyledLink } from "../footer-link";
-import { TextContainer } from "./components/text-container";
-import { TextDescription } from "./components/text-description";
-import { PointList } from "./components/list-items";
-import { Gallery } from '../education/gallery';
+import { HoveredStyledLink } from "./footer-link";
+import { TextContainer } from "./text-container";
+import { TextDescription } from "./text-description";
+import { PointList } from "./list-items";
+import { Gallery } from './gallery';
 
 
 export const PageGrid = memo(function PageGrid(props: any) {
