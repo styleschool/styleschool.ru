@@ -2,13 +2,26 @@
 
 import React from 'react';
 import { HamburgerIcon, LockIcon } from '@chakra-ui/icons'
-import { useMediaQuery, Flex, Drawer, DrawerOverlay, DrawerContent, DrawerCloseButton, DrawerHeader, DrawerBody, IconButton, Box, useDisclosure } from '@chakra-ui/react'
+import {
+  useMediaQuery,
+  Flex,
+  Drawer,
+  DrawerOverlay,
+  DrawerContent,
+  DrawerCloseButton,
+  DrawerHeader,
+  DrawerBody,
+  IconButton,
+  Box,
+  useDisclosure,
+  Link
+} from '@chakra-ui/react'
 import {
   Breadcrumb,
   BreadcrumbItem,
   BreadcrumbLink,
-  BreadcrumbSeparator,
 } from '@chakra-ui/react'
+import NextLink from 'next/link'
 
 export default function Header(props: any) {
   const [isMax959] = useMediaQuery('(max-width: 959px)')
@@ -21,10 +34,10 @@ export default function Header(props: any) {
             <BreadcrumbItem>
               <BreadcrumbLink href='/'>ВШСДТ</BreadcrumbLink>
             </BreadcrumbItem>
-            {props?.breadcrumbs ? props?.breadcrumbs.map((crumb:{text: string; link: string}, i:number) => <BreadcrumbItem key={i} isCurrentPage={props?.breadcrumbs.length === i+1}><BreadcrumbLink href={crumb.link}>{crumb.text}</BreadcrumbLink></BreadcrumbItem>) : ''}
+            {props?.breadcrumbs ? props?.breadcrumbs.map((crumb:{text: string; href: string}, i:number) => <BreadcrumbItem key={i} isCurrentPage={props?.breadcrumbs.length === i+1}><BreadcrumbLink href={crumb.href}>{crumb.text}</BreadcrumbLink></BreadcrumbItem>) : ''}
           </Breadcrumb>
         </Box>
-        <LockIcon w={10} h={10} p="0.5rem"/>
+        <Link as={NextLink} title="Авторизация" href="/intro"><LockIcon w={10} h={10} p="0.5rem"/></Link>
         <Drawer placement="left" onClose={onClose} isOpen={isOpen} size="md">
           <DrawerOverlay />
           <DrawerContent>

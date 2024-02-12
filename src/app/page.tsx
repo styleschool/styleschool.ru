@@ -31,10 +31,10 @@ export default function Home() {
       <Flex direction="column">
         <Box p="1rem" sx={{ borderLeft: '1px solid black' }}>
           <Link as={NextLink} title="Образование" href="education"><Text>Образование</Text></Link>
-          <Link as={NextLink} title="" href=""><Text>Поступление</Text></Link>
-          <Link as={NextLink} title="" href=""><Text>Проекты</Text></Link>
-          <Link as={NextLink} title="" href=""><Text>О Школе</Text></Link>
-          <Link as={NextLink} title="" href=""><Text>Контакты</Text></Link>
+          <Link as={NextLink} title="Поступление" href="enrollment"><Text>Поступление</Text></Link>
+          {/* <Link as={NextLink} title="Проекты" href=""><Text>Проекты</Text></Link>
+          <Link as={NextLink} title="О Школе" href=""><Text>О Школе</Text></Link> */}
+          <Link as={NextLink} title="Контакты" href="contacts"><Text>Контакты</Text></Link>
         </Box>
       </Flex>
     </Flex>
