@@ -17,19 +17,19 @@ export default function Home() {
       <Image onMouseOut={e=>{setLogo(0)}} onMouseOver={e=>{setLogo(1)}} src={logoObj[logo]} width='200' height="200" alt="logo" />
     </Flex>
     <Flex direction="column" align="center" p="1rem">
-      <Text textStyle="h1" color="black">ВЫСШАЯ ШКОЛА <Text textStyle="Light30" as="span" >СТИЛИСТИКИ</Text></Text>
-      <Text textStyle="h1" color="black"><Text as="span" color="primary">ДИЗАЙНА</Text> И <Text as="span" color="secondary">ТЕХНОЛОГИЙ</Text></Text>
+      <Text textStyle="h1" color="black">ВЫСШАЯ ШКОЛА СТИЛИСТИКИ</Text>
+      <Text textStyle="h1" color="black">ДИЗАЙНА И ТЕХНОЛОГИЙ</Text>
     </Flex>
-    <Flex direction="row" mb="1.5rem" justify="center" p="1rem">
+    <Flex direction="row" mb="1.5rem" p="1rem" justifyContent="center" alignItems="center">
+    <Box p="1rem" sx={{ borderRight: '1px solid black' }}>
+      <Text textStyle="h2">Мода</Text>
+      <Text textStyle="h2">Дизайн</Text>
+      <Text textStyle="h2">IT</Text>
+      <Text>и повышение квалификации</Text>
+      <Text>в креативных индустриях</Text>
+    </Box>
       <Flex direction="column">
         <Box p="1rem">
-          <Text>Профессиональная переподготовка</Text>
-          <Text>и повышение квалификации</Text>
-          <Text>в креативных индустриях</Text>
-        </Box>
-      </Flex>
-      <Flex direction="column">
-        <Box p="1rem" sx={{ borderLeft: '1px solid black' }}>
           <Link as={NextLink} title="Образование" href="education"><Text>Образование</Text></Link>
           <Link as={NextLink} title="Поступление" href="enrollment"><Text>Поступление</Text></Link>
           {/* <Link as={NextLink} title="Проекты" href=""><Text>Проекты</Text></Link>

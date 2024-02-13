@@ -16,28 +16,19 @@ import {
   useDisclosure,
   Link
 } from '@chakra-ui/react'
-import {
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbLink,
-} from '@chakra-ui/react'
 import NextLink from 'next/link'
+import { PiUserFill } from "react-icons/pi";
+import { IconProvider } from "./icon-provider";
 
 export default function Header(props: any) {
   const [isMax959] = useMediaQuery('(max-width: 959px)')
   const { isOpen, onOpen, onClose } = useDisclosure()
   return (
-      <Flex direction="row" align="center" height="35" bg="#F9F9F9" color="black" p={isMax959 ? 0 : "2rem 6rem"}>
+      <Flex direction="row" align="center" height="35" bg="#F9F9F9" color="black" p={isMax959 ? 0 : "2rem 6rem"} sx={{position: 'fixed', width: '100%'}}>
         <IconButton aria-label='menu' icon={<HamburgerIcon />} onClick={onOpen}></IconButton>
         <Box color="secondary" m="0 auto">
-          <Breadcrumb>
-            <BreadcrumbItem>
-              <BreadcrumbLink href='/'>ВШСДТ</BreadcrumbLink>
-            </BreadcrumbItem>
-            {props?.breadcrumbs ? props?.breadcrumbs.map((crumb:{text: string; href: string}, i:number) => <BreadcrumbItem key={i} isCurrentPage={props?.breadcrumbs.length === i+1}><BreadcrumbLink href={crumb.href}>{crumb.text}</BreadcrumbLink></BreadcrumbItem>) : ''}
-          </Breadcrumb>
         </Box>
-        <Link as={NextLink} title="Авторизация" href="/intro"><LockIcon w={10} h={10} p="0.5rem"/></Link>
+        <Link as={NextLink} title="Авторизация" href="/intro"><IconProvider size='1.5rem' icon={<PiUserFill/>} /></Link>
         <Drawer placement="left" onClose={onClose} isOpen={isOpen} size="md">
           <DrawerOverlay />
           <DrawerContent>

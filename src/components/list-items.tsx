@@ -23,8 +23,9 @@ export const PointList = (props: {
   content: any;
   isMax959:boolean;
   mb?: string;
+  minWidth?: string;
 }) => {
-  const { type, content, isMax959, mb } = props;
+  const { type, content, isMax959, mb, minWidth } = props;
   return type === 'column' ? 
     <UnorderList mb={mb}>
       {content.map ? content.map((item:{text: string; endLink?: {href: string; title: string; text: string}}, i:number) => (<ListItem key={i}>
@@ -33,18 +34,11 @@ export const PointList = (props: {
         </Text>
       </ListItem>)) : null}
     </UnorderList>
-  : <Flex direction={isMax959 ? "column" : "row"} mb="md">
-     <Flex direction="column" alignItems="flex-start" justify="flex-start" w={isMax959 ? '100%' : '50%'} mr={isMax959 ? 0 : '2rem'}>
-      {content?.['1column'] ? content?.['1column'].map((item:any, i:number) => 
-       <Stack direction={!isMax959 ? 'row' : 'column'} key={i} spacing={isMax959 ? '0.5rem' : '1rem'} mb="xs">
-         { item['1part'] ? <Text textStyle="Bold16">{item['1part']}</Text> : null }
-         { item['2part'] ? <TextDescription mb={0} text={item['2part']} /> : null }
-       </Stack> ) : null}
-     </Flex>
-     <Flex mb={mb} direction="column" alignItems="flex-start" justify="flex-start" w={isMax959 ? '100%' : '50%'}>
-     {content?.['2column'] ? content?.['2column'].map((item:any, i:number) => 
-       <Stack direction={!isMax959 ? 'row' : 'column'} key={i} spacing={isMax959 ? '0.5rem' : '1rem'} mb="xs">
-         { item['1part'] ? <Text textStyle="Bold16">{item['1part']}</Text> : null }
+  : <Flex direction={isMax959 ? "column" : "row"} mb={isMax959 ? '3rem' : 'md'}>
+     <Flex direction="column" alignItems="flex-start" justify="flex-start" w="100%" mr={isMax959 ? 0 : '2rem'}>
+      {content ? content.map((item:any, i:number) => 
+       <Stack direction={isMax959 ? 'column' : 'row'} key={i} spacing={isMax959 ? '0.5rem' : '1rem'} w="100%" mb="xs">
+         { item['1part'] ? <Text minWidth={minWidth} textStyle="Bold16">{item['1part']}</Text> : null }
          { item['2part'] ? <TextDescription mb={0} text={item['2part']} /> : null }
        </Stack> ) : null}
      </Flex>
