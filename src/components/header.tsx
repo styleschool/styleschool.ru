@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { HamburgerIcon, LockIcon } from '@chakra-ui/icons'
+import { HamburgerIcon } from '@chakra-ui/icons'
 import {
   useMediaQuery,
   Flex,
@@ -14,7 +14,8 @@ import {
   IconButton,
   Box,
   useDisclosure,
-  Link
+  Link,
+  Text
 } from '@chakra-ui/react'
 import NextLink from 'next/link'
 import { PiUserFill } from "react-icons/pi";
@@ -27,6 +28,7 @@ export default function Header(props: any) {
       <Flex direction="row" align="center" height="35" bg="#F9F9F9" color="black" p={isMax959 ? 0 : "2rem 6rem"} sx={{position: 'fixed', width: '100%'}}>
         <IconButton aria-label='menu' icon={<HamburgerIcon />} onClick={onOpen}></IconButton>
         <Box color="secondary" m="0 auto">
+          <Text> ВШСДТ{props.pageName ? ` ⬤ ${props.pageName}` : ''}</Text>
         </Box>
         <Link as={NextLink} title="Авторизация" href="/intro"><IconProvider size='1.5rem' icon={<PiUserFill/>} /></Link>
         <Drawer placement="left" onClose={onClose} isOpen={isOpen} size="md">

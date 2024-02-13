@@ -13,7 +13,7 @@ export default function Home() {
   return (
   <Flex direction="column">
     <Header/>
-    <Flex direction="column" align="center" p="2rem">
+    <Flex direction="column" align="center" p="5rem 2rem">
       <Image onMouseOut={e=>{setLogo(0)}} onMouseOver={e=>{setLogo(1)}} src={logoObj[logo]} width='200' height="200" alt="logo" />
     </Flex>
     <Flex direction="column" align="center" p="1rem">
