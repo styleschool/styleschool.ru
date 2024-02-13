@@ -1,6 +1,6 @@
 'use client';
 
-import { Flex, Text, Box, Link } from '@chakra-ui/react'
+import { Flex, Text, Box, Link, useMediaQuery } from '@chakra-ui/react'
 import NextLink from 'next/link'
 import Image from 'next/image';
 import Footer from '../components/footer';
@@ -8,17 +8,22 @@ import Header from '../components/header';
 import { useState } from 'react'
 
 export default function Home() {
-  const [ logo, setLogo ] = useState(0);
-  const logoObj = [ 'Group_72.jpg', 'pawel-czerwinski-O3i.jpg']
+  const [ opacity, setOpacity ] = useState(0);
+  const [ isMax959 ] = useMediaQuery('(max-width: 959px)')
   return (
   <Flex direction="column">
     <Header/>
-    <Flex direction="column" align="center" p="5rem 2rem">
-      <Image onMouseOut={e=>{setLogo(0)}} onMouseOver={e=>{setLogo(1)}} src={logoObj[logo]} width='200' height="200" alt="logo" />
+    <Flex direction="column" align="center" p="6rem 2rem 1rem">
+      <Image onMouseOut={e=>{setOpacity(0)}} onMouseOver={e=>{setOpacity(1)}}  src="pawel-czerwinski-O3i.jpg" width='200' height="200" alt="logo" style={{
+        position:'absolute',
+        opacity: opacity,
+        transition:'opacity 0.5s linear'
+        }} />
+      <Image src="Group_72.jpg" width='200' height="200" alt="logo" />
     </Flex>
-    <Flex direction="column" align="center" p="1rem">
-      <Text textStyle="h1" color="black">ВЫСШАЯ ШКОЛА СТИЛИСТИКИ</Text>
-      <Text textStyle="h1" color="black">ДИЗАЙНА И ТЕХНОЛОГИЙ</Text>
+    <Flex direction="column" align="center" p="1rem" justify={'center'}>
+      <Text textStyle="h1" color="black" align={isMax959 ? 'center' : 'left'}>ВЫСШАЯ ШКОЛА СТИЛИСТИКИ</Text>
+      <Text textStyle="h1" color="black" align={isMax959 ? 'center' : 'left'}>ДИЗАЙНА И ТЕХНОЛОГИЙ</Text>
     </Flex>
     <Flex direction="row" mb="1.5rem" p="1rem" justifyContent="center" alignItems="center">
     <Box p="1rem" sx={{ borderRight: '1px solid black' }}>

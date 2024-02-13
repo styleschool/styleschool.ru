@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://menzorg.github.io/vshsdt
+
+# Sitemaps
+Sitemap: https://menzorg.github.io/vshsdt/sitemap.xml
