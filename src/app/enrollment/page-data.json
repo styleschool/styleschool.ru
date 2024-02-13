@@ -8,7 +8,6 @@
       ],
       "list": {
         "type": "column",
-        "mb": true,
         "content": [
           { "endLink": { "href": "https://t.me/styleschool_ask", "title": "Телеграм", "text": "Телеграм"} },
           { "endLink": { "href": "https://chat.whatsapp.com/LQpG7XjdGSBAiaXNgcoE54", "title": "Телеграм", "text": "WhatsApp"} }
