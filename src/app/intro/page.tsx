@@ -18,12 +18,12 @@ export default function Home() {
   return (
   <Flex direction="column">
     <Header pageName="Личные кабинеты"/>
-    <Flex direction="column" align="center" p="5rem 2rem">
+    <Flex direction="column" align="center" p="6rem 2rem 1rem">
       <Image src={"Group_72.jpg"} width='200' height="200" alt="logo" />
     </Flex>
-    <Flex direction="column" align="center" p="1rem">
-      <Text textStyle="h1" color="black">ВЫСШАЯ ШКОЛА СТИЛИСТИКИ</Text>
-      <Text textStyle="h1" color="black">ДИЗАЙНА И ТЕХНОЛОГИЙ</Text>
+    <Flex direction="column" align="center" p="1rem" justify={'center'}>
+      <Text textStyle="h1" color="black" align={isMax959 ? 'center' : 'left'}>ВЫСШАЯ ШКОЛА СТИЛИСТИКИ</Text>
+      <Text textStyle="h1" color="black" align={isMax959 ? 'center' : 'left'}>ДИЗАЙНА И ТЕХНОЛОГИЙ</Text>
     </Flex>
     <Flex direction="row" mb="1.5rem" justify="center" p="1rem">
       <Flex direction="column">

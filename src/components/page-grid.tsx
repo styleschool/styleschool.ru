@@ -21,7 +21,7 @@ export const PageGrid = memo(function PageGrid(props: any) {
     tags, list, points, breadcrumbs } = props;
   return (<>
     { title || title2 || description || details || tags || list 
-      ? <Flex direction="column" w="100%" p={isMax959 ? '6rem 2rem' : "7rem 6rem"}>
+      ? <Flex direction="column" w="100%" p={isMax959 ? '6rem 2rem' : '7rem 6rem'}>
         <Flex direction={isMax959 ? 'column' : 'row'} justify={isMax959 ? 'flex-start' : 'space-between'} mb="sm">
           <TextContainer direction="row" alignItems="flex-end" justify="flex-start" width={isMax959 ? '100%' : '50%'} mb={0} alignSelf='unset'>
 
@@ -72,7 +72,7 @@ export const PageGrid = memo(function PageGrid(props: any) {
         { point.banner && point.banner.type === 'gallery' ? <Gallery { ...point.banner }/> : point.banner ? <Box w="100%" h="10rem" bg="secondary" mb="sm" /> : null }
 
         { point.title || point.title2 || point.content || point.lists || point.button || point.details ?
-          <Flex direction="column" w="100%"  p={isMax959 ? '2rem 2rem' : "3rem 6rem"}>
+          <Flex direction="column" w="100%"  p={title || title2 || description || details || tags || list ? isMax959 ? '2rem 2rem' : "3rem 6rem" : isMax959 ? '5rem 2rem 0rem' : '6rem 6rem 0rem'}>
             <Flex direction="row" align="flex-start" mb={isMax959 ? '1rem' : "3rem"}>
               { point.title || point.title2 ? <>
                 { !isMax667 ? <Box w="xs" h="100%" mr="2rem" id={point.id}>
