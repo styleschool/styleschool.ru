@@ -104,11 +104,13 @@ export const PageGrid = memo(function PageGrid(props: any) {
                   text={item}
                 />) : null }
                 <PointList mb={list.mb === true ? isMax959 ? '3rem' : 'md' : list.mb ? list.mb : undefined} type={list.type} content={list.content} minWidth={list?.minWidth} isMax959={isMax959}/>
-                { list.details ? list.details.map((item: string, i: number) => 
-                <TextDescription 
+                { list.details ? list.details.map((detail: {text: string; mb?: string; textStyles?: string}, i: number) => 
+                <TextDescription
                   key={i}
-                  text={item}
-                />) : null }
+                  text={detail.text}
+                  mb={detail.mb}
+                  textStyles={detail.textStyles}
+                />) : null}
                 </Box>
                 }) : null }
               
@@ -128,10 +130,12 @@ export const PageGrid = memo(function PageGrid(props: any) {
               </Box></Link></Flex> : null 
               }
               {
-                point.details && point.details.length ? point.details.map((detail: string, i: number) => 
+                point.details && point.details.length ? point.details.map((detail: {text: string; mb?: string; textStyles?: string}, i: number) => 
                 <TextDescription
                   key={i}
-                  text={detail}
+                  text={detail.text}
+                  mb={detail.mb}
+                  textStyles={detail.textStyles}
                 />) : null
               }
               </VStack>
