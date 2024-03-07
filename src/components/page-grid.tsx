@@ -89,26 +89,29 @@ export const PageGrid = memo(function PageGrid(props: any) {
               <TextContainer alignItems="flex-end" justify="flex-start" width={isMax959 ? '100%' : '75%'} mb={0} alignSelf='unset'>
               <VStack align="flex-start" w="calc(100% - 2rem)" >
               {
-                point.content && point.content.length ? point.content.map((item: {mb: any; text: string}, i: number) => 
+                point.content && point.content.length ? point.content.map((item: {mb?: boolean|string; text: string; textStyles?: string;}, i: number) => 
                 <TextDescription 
                   key={i}
                   mb={item.mb === true ? isMax959 ? '3rem' : 'md' : item.mb ? item.mb : undefined}
                   text={item.text}
+                  textStyles={item.textStyles}
                 />) : null
               }
               { point.lists ? point.lists.map((list:any,i:number)=>{
                 return <Box key={i}>
-                { list.texts ? list.texts.map((item: string, i: number) => 
+                { list.texts ? list.texts.map((item: { text: string; mb?: boolean|string; textStyles?: string; }, i: number) => 
                 <TextDescription 
                   key={i}
-                  text={item}
+                  text={item.text}
+                  mb={item.mb === true ? isMax959 ? '3rem' : 'md' : item.mb ? item.mb : undefined}
+                  textStyles={item.textStyles}
                 />) : null }
                 <PointList mb={list.mb === true ? isMax959 ? '3rem' : 'md' : list.mb ? list.mb : undefined} type={list.type} content={list.content} minWidth={list?.minWidth} isMax959={isMax959}/>
-                { list.details ? list.details.map((detail: {text: string; mb?: string; textStyles?: string}, i: number) => 
+                { list.details ? list.details.map((detail: {text: string; mb?: boolean|string; textStyles?: string}, i: number) => 
                 <TextDescription
                   key={i}
                   text={detail.text}
-                  mb={detail.mb}
+                  mb={detail.mb === true ? isMax959 ? '3rem' : 'md' : detail.mb ? detail.mb : undefined}
                   textStyles={detail.textStyles}
                 />) : null}
                 </Box>
@@ -130,11 +133,11 @@ export const PageGrid = memo(function PageGrid(props: any) {
               </Box></Link></Flex> : null 
               }
               {
-                point.details && point.details.length ? point.details.map((detail: {text: string; mb?: string; textStyles?: string}, i: number) => 
+                point.details && point.details.length ? point.details.map((detail: {text: string; mb?: boolean|string; textStyles?: string}, i: number) => 
                 <TextDescription
                   key={i}
                   text={detail.text}
-                  mb={detail.mb}
+                  mb={detail.mb === true ? isMax959 ? '3rem' : 'md' : detail.mb ? detail.mb : undefined}
                   textStyles={detail.textStyles}
                 />) : null
               }
@@ -145,7 +148,7 @@ export const PageGrid = memo(function PageGrid(props: any) {
         }
         </Box>) : null }
 
-        <Breadcrumb separator='⬤' textAlign="center" fontSize='15px' p={isMax959 ? '0rem 2rem' : "0rem 6rem"}>
+        <Breadcrumb separator='•' textAlign="center" fontSize='15px' p={isMax959 ? '0rem 2rem' : "0rem 6rem"}>
           <BreadcrumbItem>
             <BreadcrumbLink href='/'>ВШСДТ</BreadcrumbLink>
           </BreadcrumbItem>

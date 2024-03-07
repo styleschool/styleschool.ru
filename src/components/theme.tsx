@@ -73,7 +73,7 @@ const themeChakra = extendTheme({
     4.5: '1.125rem',
     'xs': '1rem',
     'sm': '3rem',
-    'md': '7rem',
+    'md': '5rem',
   },
   sizes: {
     'xs': '2rem',

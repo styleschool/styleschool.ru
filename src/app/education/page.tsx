@@ -13,18 +13,18 @@ import {
   BreadcrumbLink,
 } from '@chakra-ui/react'
 
-const breadcrumbs = [{text: 'Коммерческое образование'}];
+const breadcrumbs = [{text: 'Каталог курсов'}];
 
 export default function Home() {
   const [isMax959] = useMediaQuery('(max-width: 959px)')
   return (
   <Flex direction="column">
-    <Header pageName="Коммерческое образование"/>
+    <Header pageName='Каталог курсов'/>
     <VStack align="center" p={isMax959 ? "5rem 1rem" : "7rem 6rem"} spacing="2rem">
       { courses.map((course, i)=> <EducationCard key={i} {...course} /> ) }
     </VStack>
 
-    <Breadcrumb separator='⬤' textAlign="center" fontSize='15px' p={isMax959 ? '0rem 2rem' : "0rem 6rem"}>
+    <Breadcrumb separator='•' textAlign="center" fontSize='15px' p={isMax959 ? '0rem 2rem' : "0rem 6rem"}>
       <BreadcrumbItem>
         <BreadcrumbLink href='/'>ВШСДТ</BreadcrumbLink>
       </BreadcrumbItem>

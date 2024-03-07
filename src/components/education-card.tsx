@@ -18,7 +18,7 @@ export default function EducationCard({tags, title, level, profession, document,
             </HStack>
             : null
           }
-          <Text p="0rem 1rem" textStyle="h4" color="secondary">Курс: {title}</Text>
+          <Text p="0rem 1rem" textStyle="h4" color="secondary">{title}</Text>
           <VStack align="left" p="1.5rem">
             <Text>Уровень: {level}</Text>
             <Text>Профессия: {profession}</Text>

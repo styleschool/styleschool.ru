@@ -30,6 +30,7 @@ export default function Home() {
       <Text textStyle="h2">Мода</Text>
       <Text textStyle="h2">Дизайн</Text>
       <Text textStyle="h2">IT</Text>
+      <Text>Профессиональная переподготовка</Text>
       <Text>и повышение квалификации</Text>
       <Text>в креативных индустриях</Text>
     </Box>

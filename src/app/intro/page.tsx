@@ -41,7 +41,7 @@ export default function Home() {
         </Box>
       </Flex>
     </Flex>
-    <Breadcrumb separator='⬤' textAlign="center" fontSize='15px' p={isMax959 ? '0rem 2rem' : "0rem 6rem"}>
+    <Breadcrumb separator='•' textAlign="center" fontSize='15px' p={isMax959 ? '0rem 2rem' : "0rem 6rem"}>
       <BreadcrumbItem>
         <BreadcrumbLink href='/'>ВШСДТ</BreadcrumbLink>
       </BreadcrumbItem>

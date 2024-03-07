@@ -10,8 +10,8 @@ import data from "./page-data.json";
 export default function Home() {
   return (
   <Flex direction="column">
-    <Header pageName="Курс: Интерьерный стилист" />
-    <PageGrid { ...data } breadcrumbs={[{text: 'Коммерческое образование', href: "/education"}, {text: 'Интерьерный стилист'}]} />
+    <Header pageName="Интерьерный стилист" />
+    <PageGrid { ...data } breadcrumbs={[{text: 'Каталог курсов', href: "/education"}, {text: 'Интерьерный стилист'}]} />
     <Footer/>
   </Flex>
   )
