@@ -18,4 +18,6 @@ export const SocialButton = memo<any>(({
       </Text>
      </Button>
   )
-})
+});
+
+SocialButton.displayName = 'SocialButton';

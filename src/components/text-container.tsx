@@ -24,3 +24,5 @@ export const TextContainer = memo(({
     </Flex>
   )
 })
+
+TextContainer.displayName = 'TextContainer';

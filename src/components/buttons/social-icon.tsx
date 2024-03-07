@@ -9,3 +9,5 @@ export const SocialIcon = memo(({icon, ariaLabel}:{icon: any; ariaLabel: string}
     />
   )
 })
+
+SocialIcon.displayName = 'SocialIcon';

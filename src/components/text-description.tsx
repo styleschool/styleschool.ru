@@ -18,3 +18,5 @@ export const TextDescription = memo(({
     </Text>
   )
 })
+
+TextDescription.displayName = 'TextDescription';

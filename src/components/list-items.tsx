@@ -44,3 +44,5 @@ export const PointList = (props: {
      </Flex>
    </Flex>;
 }
+
+UnorderList.displayName = 'UnorderList';
