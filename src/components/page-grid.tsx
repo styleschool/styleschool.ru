@@ -5,7 +5,7 @@ import { HoveredStyledLink } from "./footer-link";
 import { TextContainer } from "./text-container";
 import { TextDescription } from "./text-description";
 import { PointList } from "./list-items";
-import { Gallery } from './gallery';
+import Banner from './banner';
 
 import {
   Breadcrumb,
@@ -69,7 +69,7 @@ export const PageGrid = memo(function PageGrid(props: any) {
 
       { points && points.length ? points.map((point: any, i:number) => <Box key={i}>
 
-        { point.banner && point.banner.type === 'gallery' ? <Gallery { ...point.banner }/> : point.banner ? <Box w="100%" h="10rem" bg="secondary" mb="sm" /> : null }
+        { point.banner && point.banner.type ? <Banner { ...point.banner }/> : point.banner ? <Box w="100%" h="10rem" bg="secondary" mb="sm" /> : null }
 
         { point.title || point.title2 || point.content || point.lists || point.button || point.details ?
           <Flex direction="column" w="100%"  p={title || title2 || description || details || tags || list ? isMax959 ? '2rem 2rem' : "3rem 6rem" : isMax959 ? '5rem 2rem 0rem' : '6rem 6rem 0rem'}>

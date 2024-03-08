@@ -1,9 +1,10 @@
 
-import { Flex, VStack, HStack, Box, Text, useMediaQuery } from '@chakra-ui/react';
+import { Flex, VStack, HStack, Box, Text, useMediaQuery, Link } from '@chakra-ui/react';
 import { HoveredStyledLink } from './footer-link';
 import { PiPlayFill } from "react-icons/pi";
 import { IconProvider } from "./icon-provider";
 import { useRouter } from 'next/navigation'
+import NextLink from 'next/link'
 
 export default function EducationCard({tags, title, level, profession, document, link='#', key}: {tags: {href: string; text: string}[], title: string; level: string; profession: string; document?: string; key: any; link: string;}) {
   const [isMax628] = useMediaQuery('(max-width: 628px)');
@@ -18,7 +19,8 @@ export default function EducationCard({tags, title, level, profession, document,
             </HStack>
             : null
           }
-          <Text p="0rem 1rem" textStyle="h4" color="secondary">{title}</Text>
+          <Link as={NextLink} title="title" href={link}><Text p="0rem 1rem" textStyle="h4" color="secondary">{title}</Text></Link>
+          
           <VStack align="left" p="1.5rem">
             <Text>Уровень: {level}</Text>
             <Text>Профессия: {profession}</Text>

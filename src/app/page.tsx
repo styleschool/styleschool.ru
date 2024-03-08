@@ -30,17 +30,17 @@ export default function Home() {
       <Text textStyle="h2">Мода</Text>
       <Text textStyle="h2">Дизайн</Text>
       <Text textStyle="h2">IT</Text>
-      <Text>Профессиональная переподготовка</Text>
-      <Text>и повышение квалификации</Text>
-      <Text>в креативных индустриях</Text>
+      <Text textStyle="Regular20">Профессиональная переподготовка</Text>
+      <Text textStyle="Regular20">и повышение квалификации</Text>
+      <Text textStyle="Regular20">в креативных индустриях</Text>
     </Box>
       <Flex direction="column">
         <Box p="1rem">
-          <Link as={NextLink} title="Образование" href="education"><Text>Образование</Text></Link>
-          <Link as={NextLink} title="Поступление" href="enrollment"><Text>Поступление</Text></Link>
+          <Link as={NextLink} title="Образование" href="education"><Text textStyle="Regular20">Образование</Text></Link>
+          <Link as={NextLink} title="Поступление" href="enrollment"><Text textStyle="Regular20">Поступление</Text></Link>
           {/* <Link as={NextLink} title="Проекты" href=""><Text>Проекты</Text></Link>
           <Link as={NextLink} title="О Школе" href=""><Text>О Школе</Text></Link> */}
-          <Link as={NextLink} title="Контакты" href="contacts"><Text>Контакты</Text></Link>
+          <Link as={NextLink} title="Контакты" href="contacts"><Text textStyle="Regular20">Контакты</Text></Link>
         </Box>
       </Flex>
     </Flex>

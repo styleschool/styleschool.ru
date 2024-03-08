@@ -9,6 +9,26 @@ const config: ThemeConfig = {
   cssVarPrefix: 'vshsdt',
 }
 
+const stepperTheme = {
+  variants: {
+    active: {
+      indicator: {
+        borderRadius: 10,
+      },
+    },
+    complete: {
+      indicator: {
+        borderRadius: 10,
+      },
+    },
+    incomplete: {
+      indicator: {
+        borderRadius: 10,
+      },
+    },
+  }
+}
+
 const themeChakra = extendTheme({ 
   config,
   semanticTokens: {
@@ -43,8 +63,8 @@ const themeChakra = extendTheme({
     '2xs': "calc(0.5rem + 0.5vmax)",
     xs: "calc(0.75rem + 1vmax)",
     sm: 'calc(0.95rem + 1vmax)', //"0.875rem",
-    md: "calc(1rem + 0.5vmax)",
-    lg: "calc(1.5rem + 0.5vmax)",
+    md: "calc(1.25rem + 0.5vmax)",
+    lg: "calc(1.5rem + 0.6vmax)",
     xl: "calc(1.35rem + 0.8vmax)",
     "2xl": "calc(1.5rem + 0.5vmax)",
     "3xl": "calc(1.875rem + 0.5vmax)",
@@ -66,8 +86,8 @@ const themeChakra = extendTheme({
     darkBg: '#222222',
     primary: 'rgb(187,144,41)',  // gold
     secondary: 'rgb(125,1,1)', // red
-    gray: 'rgb(160, 160, 160)', // gray
-    blue: 'rgb(87,143,163)' // blue
+    Cgray: 'rgb(160, 160, 160)', // gray
+    Cblue: 'rgb(87,143,163)' // blue
   },
   space: { // единицы измерения для padding и margin
     4.5: '1.125rem',
@@ -78,7 +98,6 @@ const themeChakra = extendTheme({
   sizes: {
     'xs': '2rem',
     'sm': '3rem',
-
   },
   textStyles: {
     h1: {
@@ -205,7 +224,7 @@ const themeChakra = extendTheme({
     },
 
     footerText: {
-      fontSize: '3xs',
+      fontSize: '2xs',
       lineHeight: '1.5',
       fontWeight: 'regular',
       color: 'black',
@@ -220,7 +239,7 @@ const themeChakra = extendTheme({
       fontSize: '3xs',
       lineHeight: '1.5',
       fontWeight: 'regular',
-      color: 'gray',
+      color: 'Cgray',
     },
     body: {
       fontSize: 'xs',
@@ -232,7 +251,8 @@ const themeChakra = extendTheme({
   components: {
     ListItem: {
         fontSize: '0.6rem'
-    }
+    },
+    Stepper: stepperTheme
   }
 })
 

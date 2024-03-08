@@ -33,8 +33,8 @@ export const HoveredStyledLink = ({text, href}:{text: string; href: string}) => 
       sx: {
         textDecoration: 'underline',
         _hover: {
-          textDecorationColor: 'blue',
-          color: 'blue',
+          textDecorationColor: 'Cblue',
+          color: 'Cblue',
         }
       }
     }}/>)

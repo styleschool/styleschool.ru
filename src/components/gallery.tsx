@@ -2,7 +2,7 @@ import { Flex, Text, useMediaQuery } from '@chakra-ui/react'
 import { memo } from "react"
 import Image from 'next/image';
 
-export const Gallery = memo(function Gallery(props: any) {
+export default memo(function Gallery(props: any) {
   const { data } = props;
   const [isMax1100] = useMediaQuery('(max-width: 1100px)')
   return (

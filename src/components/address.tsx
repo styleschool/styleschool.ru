@@ -29,7 +29,7 @@ export const Address = memo(function Address(props: any) {
               <Text>Пн-Пт с 10:00 до 22:00 (мск)</Text>
               <Text>Сб с 10:00 до 18:00</Text>
             </Box>
-            <Box w={isMax959 ? '100%' : '40%'} h="10px" bg="blue"/>
+            <Box w={isMax959 ? '100%' : '40%'} h="10px" bg="Cblue"/>
           </Flex>
         </Flex>
       </Flex>
