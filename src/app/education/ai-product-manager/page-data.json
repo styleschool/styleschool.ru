@@ -287,9 +287,9 @@
       "banner": {
         "type": "cards",
         "data": [
-          {"image": "http://localhost:3000/Group_72.jpg", "texts": [
+          {"image": "/Group_72.jpg", "texts": [
             { "text": "Сабина Алекперова"}]},
-          {"image": "http://localhost:3000/Group_72.jpg", "texts": [
+          {"image": "/Group_72.jpg", "texts": [
             { "text": "Екатерина Забавина"}]}
         ]
       }

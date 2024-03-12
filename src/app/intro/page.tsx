@@ -28,16 +28,22 @@ export default function Home() {
     <Flex direction="row" mb="1.5rem" justify="center" p="1rem">
       <Flex direction="column">
         <Box p="1rem">
-          <Text>МОДА</Text>
-          <Text>ДИЗАЙН</Text>
-          <Text>IT</Text>
+          <Text textStyle="h2">МОДА</Text>
+          <Text textStyle="h2">ДИЗАЙН</Text>
+          <Text textStyle="h2">IT</Text>
         </Box>
       </Flex>
       <Flex direction="column">
         <Box p="1rem" sx={{ borderLeft: '1px solid black' }}>
-          <Link as={NextLink} title="Образование" href="https://edu.styleschool.ru/login/index.php"><Text>ПК и ПП ВШСДТ</Text></Link>
-          <Link as={NextLink} title="" href="#"><Text>ПК и ПП в рамках Содействия занятости</Text></Link>
-          <Link as={NextLink} title="" href="https://lk.styleschool.ru/"><Text>Курсы на Soho LMS</Text></Link>
+          <Link as={NextLink} title="Образование" href="https://edu.styleschool.ru/login/index.php">
+            <Text textStyle="Regular20">ПК и ПП ВШСДТ</Text>
+          </Link>
+          <Link as={NextLink} title="" href="#">
+            <Text textStyle="Regular20">ПК и ПП в рамках Содействия занятости</Text>
+          </Link>
+          <Link as={NextLink} title="" href="https://lk.styleschool.ru/">
+            <Text textStyle="Regular20">Курсы на Soho LMS</Text>
+          </Link>
         </Box>
       </Flex>
     </Flex>

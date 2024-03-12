@@ -37,15 +37,13 @@ export default function Header(props: any) {
             <DrawerCloseButton />
             <DrawerHeader>{`АНО ДПО ВШСДТ`}</DrawerHeader>
             <DrawerBody>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Consequat nisl vel pretium lectus quam id. Semper quis lectus
-                nulla at volutpat diam ut venenatis. Dolor morbi non arcu risus
-                quis varius quam quisque. Massa ultricies mi quis hendrerit dolor
-                magna eget est lorem. Erat imperdiet sed euismod nisi porta.
-                Lectus vestibulum mattis ullamcorper velit.
-              </p>
+            <Box p="1rem">
+              <Link as={NextLink} title="Образование" href="education"><Text textStyle="Regular20">Образование</Text></Link>
+              <Link as={NextLink} title="Поступление" href="enrollment"><Text textStyle="Regular20">Поступление</Text></Link>
+              {/* <Link as={NextLink} title="Проекты" href=""><Text>Проекты</Text></Link>
+              <Link as={NextLink} title="О Школе" href=""><Text>О Школе</Text></Link> */}
+              <Link as={NextLink} title="Контакты" href="contacts"><Text textStyle="Regular20">Контакты</Text></Link>
+            </Box>
             </DrawerBody>
           </DrawerContent>
         </Drawer>
