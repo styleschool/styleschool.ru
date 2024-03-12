@@ -23,7 +23,6 @@ export default function Home() {
     <VStack align="center" p={isMax959 ? "5rem 1rem" : "7rem 6rem"} spacing="2rem">
       { courses.map((course, i)=> <EducationCard key={i} {...course} /> ) }
     </VStack>
-
     <Breadcrumb separator='•' textAlign="center" fontSize='15px' p={isMax959 ? '0rem 2rem' : "0rem 6rem"}>
       <BreadcrumbItem>
         <BreadcrumbLink href='/'>ВШСДТ</BreadcrumbLink>

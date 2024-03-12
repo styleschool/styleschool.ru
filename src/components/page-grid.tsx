@@ -5,7 +5,7 @@ import { HoveredStyledLink } from "./footer-link";
 import { TextContainer } from "./text-container";
 import { TextDescription } from "./text-description";
 import { PointList } from "./list-items";
-import Banner from './banner';
+import Banner from './banner/banner';
 
 import {
   Breadcrumb,
@@ -31,6 +31,7 @@ export const PageGrid = memo(function PageGrid(props: any) {
               <TextDescription
                 mb={0} 
                 text={description}
+                align="justify"
               />
               <HStack spacing={isMax959 ? "0.5rem" : "1.5rem"} mb={isMax959 ? '2rem' : undefined}>
                 {tags ? tags.map((tag: {id: string; text: string}, i: number) => (

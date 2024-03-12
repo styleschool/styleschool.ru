@@ -60,7 +60,7 @@ const themeChakra = extendTheme({
    },
   fontSizes: {
     '3xs': "calc(0.4rem + 0.5vmax)",
-    '2xs': "calc(0.5rem + 0.5vmax)",
+    '2xs': "calc(0.7rem + 0.5vmax)",
     xs: "calc(0.75rem + 1vmax)",
     sm: 'calc(0.95rem + 1vmax)', //"0.875rem",
     md: "calc(1.25rem + 0.5vmax)",

@@ -6,11 +6,11 @@ import { IconProvider } from "./icon-provider";
 import { useRouter } from 'next/navigation'
 import NextLink from 'next/link'
 
-export default function EducationCard({tags, title, level, profession, document, link='#', key}: {tags: {href: string; text: string}[], title: string; level: string; profession: string; document?: string; key: any; link: string;}) {
+export default function EducationCard({tags, title, level, profession, document, link='#',}: {tags: {href: string; text: string}[], title: string; level: string; profession: string; document?: string; link: string;}) {
   const [isMax628] = useMediaQuery('(max-width: 628px)');
   const router = useRouter()
     return (
-    <Box key={key} borderWidth='2px' borderRadius='lg' p="1rem 1rem" w="100%">
+    <Box borderWidth='2px' borderRadius='lg' p="1rem 1rem" w="100%">
       <Flex direction={isMax628 ? "column" : "row"} justifyContent="space-between"  borderRadius='lg' bg="#F9F9F9">
         <Flex direction="column">
           { tags?.length ?

@@ -26,14 +26,14 @@ export default function Home() {
       <Text textStyle="h1" color="black" align={isMax959 ? 'center' : 'left'}>ДИЗАЙНА И ТЕХНОЛОГИЙ</Text>
     </Flex>
     <Flex direction="row" mb="1.5rem" p="1rem" justifyContent="center" alignItems="center">
-    <Box p="1rem" sx={{ borderRight: '1px solid black' }}>
-      <Text textStyle="h2">Мода</Text>
-      <Text textStyle="h2">Дизайн</Text>
-      <Text textStyle="h2">IT</Text>
-      <Text textStyle="Regular20">Профессиональная переподготовка</Text>
-      <Text textStyle="Regular20">и повышение квалификации</Text>
-      <Text textStyle="Regular20">в креативных индустриях</Text>
-    </Box>
+      <Box p="1rem" sx={{ borderRight: '1px solid black' }}>
+        <Text textStyle="h2">Мода</Text>
+        <Text textStyle="h2">Дизайн</Text>
+        <Text textStyle="h2">IT</Text>
+        <Text textStyle="Regular20">Профессиональная переподготовка</Text>
+        <Text textStyle="Regular20">и повышение квалификации</Text>
+        <Text textStyle="Regular20">в креативных индустриях</Text>
+      </Box>
       <Flex direction="column">
         <Box p="1rem">
           <Link as={NextLink} title="Образование" href="education"><Text textStyle="Regular20">Образование</Text></Link>

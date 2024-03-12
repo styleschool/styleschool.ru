@@ -5,15 +5,17 @@ export const TextDescription = memo(({
   textStyles = 'Regular16',
   mb = 'xs',
   as = 'p',
-  text
+  text,
+  align = 'left'
 }:{
   textStyles?: string;
   mb?: string | number;
   as?: any;
   text: string;
+  align?: any;
 }) => {
   return (
-    <Text as={as} textStyle={textStyles} mb={mb}>
+    <Text as={as} textStyle={textStyles} mb={mb} align={align}>
       {text}
     </Text>
   )

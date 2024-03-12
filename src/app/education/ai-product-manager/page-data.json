@@ -285,7 +285,7 @@
     },
     {
       "banner": {
-        "type": "gallery",
+        "type": "cards",
         "data": [
           {"image": "http://localhost:3000/Group_72.jpg", "texts": [
             { "text": "Сабина Алекперова"}]},
