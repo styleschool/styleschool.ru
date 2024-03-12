@@ -1,6 +1,6 @@
 'use client';
 
-import { Flex } from '@chakra-ui/react';
+import { Flex, Box } from '@chakra-ui/react';
 import Footer from '../../components/footer';
 import Header from '../../components/header';
 import { PageGrid } from '@/components/page-grid';
@@ -12,8 +12,10 @@ export default function Home() {
   return (
   <Flex direction="column">
     <Header pageName="Контакты"/>
-    <PageGrid { ...data } breadcrumbs={[{text: 'Контакты'}]} />
-    <Address/>
+      <Box p="6rem 2rem 1rem">
+        <Address/>
+        <PageGrid { ...data } breadcrumbs={[{text: 'Контакты'}]} />
+      </Box>
     <Footer/>
   </Flex>
   )

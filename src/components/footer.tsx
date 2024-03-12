@@ -157,7 +157,7 @@ export default function Footer(props: any) {
                         }
                       }
                     }}
-                    href="/corporate" text="Сетевые программы" />
+                    href="https://old.styleschool.ru/network-educational-programs" text="Сетевые программы" />
                 </ListItem>
                 <ListItem>
                   <StyledLink 
@@ -170,7 +170,7 @@ export default function Footer(props: any) {
                         }
                       }
                     }}
-                    href="/vacancy" text="Разработка курсов" />
+                    href="https://old.styleschool.ru/corporate" text="Разработка курсов" />
                 </ListItem>
                 <ListItem>
                   <StyledLink 
@@ -183,7 +183,7 @@ export default function Footer(props: any) {
                         }
                       }
                     }}
-                    href="/vacancy" text='Резюме & Вакансии' />
+                    href="https://old.styleschool.ru/vacancy" text='Резюме & Вакансии' />
                 </ListItem>
               </UnorderedList>
           </Box>
@@ -211,7 +211,7 @@ export default function Footer(props: any) {
                         color: 'rgb(87,143,163)'
                       }
                     }
-                  }} href="/information-about-educational-organization" text="Сведения об образовательной организации" 
+                  }} href="https://old.styleschool.ru/information-about-educational-organization" text="Сведения об образовательной организации" 
                 />
                 <StyledLink textStyles="footerLink"
                     textProps={{
@@ -223,7 +223,7 @@ export default function Footer(props: any) {
                         }
                       }
                     }}
-                    href="/information" text="Информация для пользователей" 
+                    href="https://old.styleschool.ru/information" text="Информация для пользователей" 
                   />
                   <StyledLink textStyles="footerLink"
                     textProps={{
@@ -298,8 +298,7 @@ export default function Footer(props: any) {
             <HoveredStyledLink href="#" text="#управление" />
           </HStack>
           <Box w="100%">
-            <Text textStyle="footerText" align="center">&copy;&emsp;ВШСДТ 2011-2021 Российское академическое онлайн
-              образование.</Text>
+            <Text textStyle="footerText" align="center">&copy;&emsp;ВШСДТ 2011-2024 Российское академическое онлайн образование.</Text>
           </Box>
         </Flex>
       </Flex>

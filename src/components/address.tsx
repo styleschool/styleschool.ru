@@ -1,5 +1,6 @@
 import { Box, Flex, Text, VStack, useMediaQuery } from '@chakra-ui/react'
 import { memo } from "react"
+import Image from 'next/image';
 
 export const Address = memo(function Address(props: any) {
   const [isMax667] = useMediaQuery('(max-width: 667px)');
@@ -23,13 +24,13 @@ export const Address = memo(function Address(props: any) {
               <Text>Телефон: +7 495 221-89-35</Text>
               <Text>E-mail: info@styleschool.ru</Text>
               <br/>
-              <Text>Время работы учебного отдела:</Text>
+              <Text textStyle="Bold16">Время работы учебного отдела:</Text>
               <Text>Пн-Пт с 09:30 до 18:30 (мск)</Text>
-              <Text>Время проведения занятий, в т.ч. онлайн:</Text>
+              <Text textStyle="Bold16">Время проведения занятий, в т.ч. онлайн:</Text>
               <Text>Пн-Пт с 10:00 до 22:00 (мск)</Text>
               <Text>Сб с 10:00 до 18:00</Text>
             </Box>
-            <Box w={isMax959 ? '100%' : '40%'} h="10px" bg="Cblue"/>
+            <Image src="fasad.jpg" width='400' height="200" alt="logo" />
           </Flex>
         </Flex>
       </Flex>
