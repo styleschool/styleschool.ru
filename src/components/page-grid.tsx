@@ -70,23 +70,23 @@ export const PageGrid = memo(function PageGrid(props: any) {
 
       { points && points.length ? points.map((point: any, i:number) => <Box key={i}>
 
-        { point.banner && point.banner.type ? <Banner { ...point.banner }/> : point.banner ? <Box w="100%" h="10rem" bg="secondary" mb="sm" /> : null }
+        { point.banner && point.banner.type ? <Banner { ...point.banner }/> : point.banner ? <Box w="100%" h="10rem" bg="secondary" mb={point.banner.mb ? point.banner.mb : 'sm'} /> : null }
 
         { point.title || point.title2 || point.content || point.lists || point.button || point.details ?
-          <Flex direction="column" w="100%"  p={title || title2 || description || details || tags || list ? isMax959 ? '2rem 2rem' : "3rem 6rem" : isMax959 ? '5rem 2rem 0rem' : '6rem 6rem 0rem'}>
+          <Flex direction="column" w="100%"  p={title || title2 || description || details || tags || list ? isMax959 ? '2rem 2rem' : "2rem 6rem" : isMax959 ? '5rem 2rem 0rem' : '6rem 6rem 0rem'}>
             <Flex direction="row" align="flex-start" mb={isMax959 ? '1rem' : "3rem"}>
               { point.title || point.title2 ? <>
-                { !isMax667 ? <Box w="xs" h="100%" mr="2rem" id={point.id}>
+                { !isMax667 ? <Box w="xs" h="100%" mr="2rem">
                   <Box w="xs" h="xs" bg='secondary' />
                 </Box> : null 
                 }
-                <Flex direction="column" align="flex-start">
+                <Flex direction="column" align="flex-start" id={point.id}>
                   { point.title ? <Text as="h2" textStyle="Light20">{point.title}</Text> : null }
                   { point.title2 ? <Text as="h2" textStyle="Bold20" mb="1rem">{point.title2}</Text> : null }
                 </Flex>
               </> : null }
             </Flex>
-            { point.content || point.lists || point.button || point.details ? <Flex direction='row' justify={'flex-end'} mb={isMax959 ? 0 : 'sm'} >
+            { point.content || point.lists || point.button || point.details ? <Flex direction='row' justify={'flex-end'} mb={point.mb ? point.mb : isMax959 ? 0 : 'sm'} >
               <TextContainer alignItems="flex-end" justify="flex-start" width={isMax959 ? '100%' : '75%'} mb={0} alignSelf='unset'>
               <VStack align="flex-start" w="calc(100% - 2rem)" >
               {

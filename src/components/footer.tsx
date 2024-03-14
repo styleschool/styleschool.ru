@@ -8,9 +8,6 @@ import { StyledLink, HoveredStyledLink } from './footer-link';
 import { IconProvider } from "./icon-provider";
 import { SocialIcon } from './buttons/social-icon';
 
-
-const font = "Alegreya Sans";
-
 const TextTitle = ({text, textStyles = 'footerTitle', textProps }:{text: string; textStyles?: string; textProps?: any}) => {
   return <Text textStyle={textStyles} {...textProps}>{text}</Text>
 }
@@ -33,14 +30,21 @@ export default function Footer(props: any) {
             }
           }}
         >
-          <Box>
+          <Box pb="1rem">
             <TextTitle text="НАПРАВЛЕНИЯ ОБУЧЕНИЯ" textProps={{ as: 'h2', mb: '0.3rem'}} />
             <Flex direction="column">
-              <StyledLink href="#" text="Репутационные технологии" />
+              
+              {/* <StyledLink href="#" text="Репутационные технологии" />
               <StyledLink href="#" text="Искусственный интеллект и нейросети" />
               <StyledLink href="#" text="Имидж и стиль" />
               <StyledLink href="#" text="Дизайн среды" />
-              <StyledLink href="#" text="Управление продуктом" />
+              <StyledLink href="#" text="Управление продуктом" /> */}
+                
+              <Text> Репутационные технологии </Text>
+              <Text> Искусственный интеллект и нейросети </Text>
+              <Text> Имидж и стиль </Text>
+              <Text> Дизайн среды </Text>
+              <Text> Управление продуктом </Text>
             </Flex>
           </Box>
           <Box>

@@ -19,11 +19,12 @@
   ],
   "points": [
     {
+      "mb": "0px",
       "banner": {
         "type": "image",
         "width": "100%",
         "height": "400px",
-        "backgroundImage": "/banner_image_consultant.jpg",
+        "backgroundImage": "/banners/banner_image_consultant.jpg",
         "backgroundPosition": "center",
         "backgroundRepeat": "no-repeat",
         "backgroundColor": "#EBE8EB"
@@ -36,8 +37,8 @@
         { "text": "Доступно полностью дистанционное (онлайн) обучение"},
         { "text": "Доступно комбинированное обучение с очными практиками", "mb": true}
     ],
-      "button": {"text": "поступление", "href": "#", "title": "поступление", "mb": true},
       "lists": [{
+        "mb": "0px",
         "type": "2columns",
         "minWidth": "300px",
         "content": [
@@ -65,6 +66,21 @@
           }
         ]
       }]
+    },
+    {
+      "mb": "0px",
+      "banner": {
+        "type": "snetworks",
+        "size": "4rem",
+        "justify": "end",
+        "telegram": "https://t.me/styleschoolru",
+        "whatsapp": "https://chat.whatsapp.com/LQpG7XjdGSBAiaXNgcoE54",
+        "mb": "0px"
+      }
+    },
+    {
+      "mb": "0px",
+      "button": {"text": "подрбнее о поступлении", "href": "/enrollment", "title": "подрбнее о поступлении"}
     },
     {
       "title2": "Обзор курса",
@@ -152,16 +168,16 @@
       "banner": {
         "type": "cards",
         "data": [
-          {"image": "/Group_72.jpg", "texts": [
+          {"image": "/teachers/inessa_trubeckova.jpg", "texts": [
             { "text": "Инесса Трубецкова  (Россия, Москва)" },
             { "text": "Имидж‑эксперт. Зав. кафедрой “Имиджа и стиля” Академии социальных технологий. Соавтор 12 книг бестселлеров о стиле, гардеробе, дресс-кодах, учебников и инструментов для стилистов. Преподаватель ВШСДТ." }]},
-          {"image": "/Group_72.jpg", "texts": [
+          {"image": "/teachers/shabalina.jpg", "texts": [
             { "text": "Светлана Шабалина (Россия, Москва)" },
             { "text": "Практикующий имидж-стилист, коуч, автор книги «Быть стильной, оставаясь собой. Как с помощью одежды рассказать о своей уникальности» (Из-во: ”Директ медиа”, 2021 г.). Преподаватель ВШСДТ." }]},
-          {"image": "/Group_72.jpg", "texts": [
+          {"image": "/teachers/boneckaya_marina.jpg", "texts": [
             { "text": "Марина Бонецкая (Россия, Москва)" },
             { "text": "Художник-дизайнер, доцент, автор курсов по созданию корпоративного и персонального имиджа и стиля, член Международной Организации «Союз дизайнеров». Преподаватель ВШСДТ." }]},
-          {"image": "/Group_72.jpg", "texts": [
+          {"image": "/teachers/chekmareva_ekaterina.jpeg", "texts": [
             { "text": "Екатерина Чекмарева (Россия, Москва)" },
             { "text": "Стилист-имиджмейкер, фэшн аналитик, выпускница ВШСДТ и философского факультета МГУ, отделение «Теория и индустрия моды». Создатель бренда головных уборов. Преподаватель ВШСДТ." }]}
         ]

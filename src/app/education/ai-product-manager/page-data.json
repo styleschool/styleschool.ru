@@ -19,11 +19,12 @@
   ],
   "points": [
     {
+      "mb": "0px",
       "banner": {
         "type": "image",
         "width": "100%",
         "height": "400px",
-        "backgroundImage": "/ai2.jpg",
+        "backgroundImage": "/banners/ai2.jpg",
         "backgroundPosition": "center",
         "backgroundRepeat": "no-repeat",
         "backgroundColor": "#1B1A22",
@@ -36,8 +37,8 @@
         { "text": "Профессия: менеджер продукта, product manager"},
         { "text": "Доступно полностью дистанционное (онлайн) обучение", "mb": true}
     ],
-      "button": {"text": "поступление", "href": "#", "title": "поступление", "mb": true},
       "lists": [{
+        "mb": "0px",
         "type": "2columns",
         "minWidth": "300px",
         "content": [
@@ -67,6 +68,22 @@
           }
         ]
       }]
+    },
+
+    {
+      "mb": "0px",
+      "banner": {
+        "type": "snetworks",
+        "size": "4rem",
+        "justify": "end",
+        "telegram": "https://t.me/styleschoolru",
+        "whatsapp": "https://chat.whatsapp.com/LQpG7XjdGSBAiaXNgcoE54",
+        "mb": "0px"
+      }
+    },
+    {
+      "mb": "0px",
+      "button": {"text": "подрбнее о поступлении", "href": "/enrollment", "title": "подрбнее о поступлении"}
     },
     {
       "title2": "Обзор курса",

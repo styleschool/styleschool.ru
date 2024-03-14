@@ -18,11 +18,12 @@
   ],
   "points": [
     {
+      "mb": "0px",
       "banner": {
         "type": "image",
         "width": "100%",
         "height": "400px",
-        "backgroundImage": "/ai.jpg",
+        "backgroundImage": "/banners/ai.jpg",
         "backgroundPosition": "right",
         "backgroundRepeat": "no-repeat",
         "backgroundColor": "black",
@@ -35,10 +36,10 @@
         { "text": "Профессия: контент менеджер, промпт инженер"},
         { "text": "Доступно полностью дистанционное (онлайн) обучение", "mb": true}
     ],
-      "button": {"text": "поступление", "href": "#", "title": "поступление", "mb": true},
       "lists": [{
         "type": "2columns",
         "minWidth": "300px",
+        "mb": "0px",
         "content": [
           {
             "1part": "Длительность",
@@ -64,6 +65,21 @@
           }
         ]
       }]
+    },
+    {
+      "mb": "0px",
+      "banner": {
+        "type": "snetworks",
+        "size": "4rem",
+        "justify": "end",
+        "telegram": "https://t.me/styleschoolru",
+        "whatsapp": "https://chat.whatsapp.com/LQpG7XjdGSBAiaXNgcoE54",
+        "mb": "0px"
+      }
+    },
+    {
+      "mb": "0px",
+      "button": {"text": "подрбнее о поступлении", "href": "/enrollment", "title": "подрбнее о поступлении"}
     },
     {
       "title2": "Обзор курса",
@@ -184,7 +200,7 @@
       "banner": {
         "type": "cards",
         "data": [
-          {"image": "/Group_72.jpg", "texts": [
+          {"image": "/teachers/anna_klimenkodi.jpg", "texts": [
             { "text": "Анна Клименкоди (Россия, Испания)"}, { "text": "Практикующий дизайнер с международной практикой, предприниматель. С 2005 по 2022 г. Генеральный директор, главный дизайнер ООО Дизайн студия 'Крем'. г. Краснодар. Член Международной Ассоциации Дизайна IIDA. Специализируется в применении нейросетей в области графического дизайна и дизайна среды. Преподаватель ВШСДТ"}]}
         ]
       }

@@ -34,7 +34,7 @@ export const PointList = (props: {
         </Text>
       </ListItem>)) : null}
     </UnorderList>
-  : <Flex direction={isMax959 ? "column" : "row"} mb={isMax959 ? '3rem' : 'md'}>
+  : <Flex direction={isMax959 ? "column" : "row"} mb={mb ? mb : isMax959 ? '3rem' : 'md'}>
      <Flex direction="column" alignItems="flex-start" justify="flex-start" w="100%" mr={isMax959 ? 0 : '2rem'}>
       {content ? content.map((item:any, i:number) => 
        <Stack direction={isMax959 ? 'column' : 'row'} key={i} spacing={isMax959 ? '0.5rem' : '1rem'} w="100%" mb="xs">

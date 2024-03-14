@@ -6,7 +6,7 @@ export const TextDescription = memo(({
   mb = 'xs',
   as = 'p',
   text,
-  align = 'left'
+  align = 'justify'
 }:{
   textStyles?: string;
   mb?: string | number;
