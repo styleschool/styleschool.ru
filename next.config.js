@@ -10,7 +10,6 @@ const nextConfig = (phase, { defaultConfig }) => {
         return {
             output: 'export',
             images: { unoptimized: true },
-            basePath: '/vshsdt'
         }
     }
 }
