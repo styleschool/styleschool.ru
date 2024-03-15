@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://menzorg.github.io/vshsdt
+Host: https://new.styleschool.ru
 
 # Sitemaps
-Sitemap: https://menzorg.github.io/vshsdt/sitemap.xml
+Sitemap: https://new.styleschool.ru/sitemap.xml

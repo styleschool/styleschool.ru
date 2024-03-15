@@ -1,12 +1,13 @@
 'use client'
 
-import { Box, Flex, HStack, ListItem, Stack, Text, UnorderedList, useMediaQuery } from '@chakra-ui/react';
+import { Box, Flex, HStack, Link, ListItem, Stack, Text, UnorderedList, useMediaQuery } from '@chakra-ui/react';
 import { PiTelegramLogoThin, PiWhatsappLogoThin, PiYoutubeLogoThin } from "react-icons/pi";
 import { SlSocialVkontakte } from "react-icons/sl";
 import { SocialButton } from "./buttons/social-button";
 import { StyledLink, HoveredStyledLink } from './footer-link';
 import { IconProvider } from "./icon-provider";
 import { SocialIcon } from './buttons/social-icon';
+import NextLink from 'next/link'
 
 const TextTitle = ({text, textStyles = 'footerTitle', textProps }:{text: string; textStyles?: string; textProps?: any}) => {
   return <Text textStyle={textStyles} {...textProps}>{text}</Text>
@@ -114,7 +115,7 @@ export default function Footer(props: any) {
               <StyledLink href="/contacts" text="Все контакты" />
             </Box>
           </Flex>
-          <Box>
+          {/* <Box>
             <TextTitle text="ПРОГРАММЫ РАЗВИТИЯ" textProps={{ as: 'h2', mb: '0.3rem'}} />
               <UnorderedList
                 sx={{
@@ -190,14 +191,14 @@ export default function Footer(props: any) {
                     href="https://old.styleschool.ru/vacancy" text='Резюме & Вакансии' />
                 </ListItem>
               </UnorderedList>
-          </Box>
+          </Box> */}
         </Flex>
         <Flex direction="column">
           <Box w="100%" h="0.05rem" bg="black" mb="0.1rem" />
           <Stack direction="row" justify="flex-end" align="center" w="100%">
-            <SocialIcon icon={<IconProvider size='1.2rem' icon={<PiTelegramLogoThin />} />} ariaLabel='Telegram' />
-            <SocialIcon icon={<IconProvider size='1.2rem' icon={<SlSocialVkontakte />} />} ariaLabel='Vkontakte' />
-            <SocialIcon icon={<IconProvider size='1.2rem' icon={<PiYoutubeLogoThin />} />} ariaLabel='Youtube' />
+            <Link as={NextLink} title="Telegram" href={'https://t.me/styleschoolru'}><SocialIcon icon={<IconProvider size='1.2rem' icon={<PiTelegramLogoThin />} />} ariaLabel='Telegram' /></Link>
+            <Link as={NextLink} title="Vkontakte" href={'https://vk.com/stileschoolru'}><SocialIcon icon={<IconProvider size='1.2rem' icon={<SlSocialVkontakte />} />} ariaLabel='Vkontakte' /></Link>
+            <Link as={NextLink} title="Youtube" href={'https://www.youtube.com/@styleschool_ru'}><SocialIcon icon={<IconProvider size='1.2rem' icon={<PiYoutubeLogoThin />} />} ariaLabel='Youtube' /></Link>
           </Stack>
           <Flex direction={isMax628 ? "column" : "row"} justify="space-between" alignSelf='flex-start' mb="2rem">
             <Flex direction="column" justify="start" alignSelf="center" w="100%" mb='1rem'>

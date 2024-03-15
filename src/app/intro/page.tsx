@@ -28,9 +28,9 @@ export default function Home() {
     <Flex direction="row" mb="1.5rem" justify="center" p="1rem">
       <Flex direction="column">
         <Box p="1rem">
-          <Text textStyle="h2">МОДА</Text>
-          <Text textStyle="h2">ДИЗАЙН</Text>
-          <Text textStyle="h2">IT</Text>
+          <Text align="right" textStyle="h2">МОДА</Text>
+          <Text align="right" textStyle="h2">ДИЗАЙН</Text>
+          <Text align="right" textStyle="h2">IT</Text>
         </Box>
       </Flex>
       <Flex direction="column">

@@ -1,4 +1,4 @@
 module.exports = {
-    siteUrl: 'https://menzorg.github.io/vshsdt',
+    siteUrl: 'https://new.styleschool.ru',
     generateRobotsTxt: true
   }

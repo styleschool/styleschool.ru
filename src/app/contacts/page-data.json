@@ -1,17 +1,23 @@
 {
   "points": [
     {
+      "mb": "0px",
       "title": "Обратная связь",
-      "lists": [{
-        "texts": [{ "text": "На данный момент запись на программы ВШСДТ и получения информации по обучению доступны только в следующих группах:"}],
-        "type": "column",
-        "mb": true,
-        "content": [
-          { "endLink": { "href": "https://t.me/styleschool_ask", "title": "Телеграм", "text": "Телеграм"} },
-          { "endLink": { "href": "https://chat.whatsapp.com/LQpG7XjdGSBAiaXNgcoE54", "title": "Телеграм", "text": "WhatsApp"} }
-        ]
-      }],
-      "details": [
+      "content": [{ "text": "На данный момент запись на программы ВШСДТ и получения информации по обучению доступны только в следующих группах:"}]
+    },
+    {
+      "mb": "0px",
+      "banner": {
+        "type": "snetworks",
+        "size": "4rem",
+        "justify": "end",
+        "telegram": "https://t.me/styleschoolru",
+        "whatsapp": "https://chat.whatsapp.com/LQpG7XjdGSBAiaXNgcoE54",
+        "mb": "0px"
+      }
+    },
+    {
+      "content": [
         {"text": "Наши специалисты готовы ответить на ваши запросы в течение 48 часов в рабочие дни с 9:00 до 19:00 по московскому времени. Не стесняйтесь связаться с нами через указанные каналы для получения необходимой информации и поддержки."}
       ]
     }

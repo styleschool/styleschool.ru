@@ -12,7 +12,7 @@ export default memo(function Cards(props: any) {
           return (
             <Flex key={i} direction="column" justify="center" mb="sm" mr={isMax959 ? undefined : "sm"} borderWidth='2px' borderRadius='lg' p="1rem 1rem">
               <Flex direction="row" justify="center" mb="1rem">
-                <Image src={item.image} width='200' height="600" alt="logo" />
+                <Image src={item.image} width='200' height="600" alt="card-image" />
               </Flex>
               { item.texts? item.texts.map((itemText: {text: string}, i:number) => { return (
                 <Flex key={i} w={isMax959 ? '100%' : '370px'} direction="row" justify="center" mb="1rem"><Text>{itemText.text}</Text>

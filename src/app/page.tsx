@@ -27,12 +27,12 @@ export default function Home() {
     </Flex>
     <Flex direction="row" mb="1.5rem" p="1rem" justifyContent="center" alignItems="center">
       <Box p="1rem" sx={{ borderRight: '1px solid black' }}>
-        <Text textStyle="h2">Мода</Text>
-        <Text textStyle="h2">Дизайн</Text>
-        <Text textStyle="h2">IT</Text>
-        <Text textStyle="Regular20">Профессиональная переподготовка</Text>
-        <Text textStyle="Regular20">и повышение квалификации</Text>
-        <Text textStyle="Regular20">в креативных индустриях</Text>
+        <Text align="right" textStyle="h2">Мода</Text>
+        <Text align="right" textStyle="h2">Дизайн</Text>
+        <Text align="right" textStyle="h2">IT</Text>
+        <Text align="right" textStyle="Regular20">Профессиональная переподготовка</Text>
+        <Text align="right" textStyle="Regular20">и повышение квалификации</Text>
+        <Text align="right" textStyle="Regular20">в креативных индустриях</Text>
       </Box>
       <Flex direction="column">
         <Box p="1rem">

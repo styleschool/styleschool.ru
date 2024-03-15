@@ -121,10 +121,10 @@ export const PageGrid = memo(function PageGrid(props: any) {
               { point.button ? <Flex direction="row" w="100%" justifyContent="flex-end">
               <Link as={NextLink} title={point.button.title} href={point.button.href}><Box position="relative" textAlign="right" mb={point.button.mb === true ? isMax959 ? 0 : 'md' : point.button.mb ? point.button.mb : undefined }>
                 <Box 
-                  w="4rem" h="4rem" 
+                  w="6.5rem" h="6.5rem" 
                   border="thin solid rgb(125,1,1)"
-                  borderRadius="50%" 
-                  position="absolute" top="-1.5rem" right="3rem" zIndex="1" 
+                  borderRadius="80%" 
+                  position="absolute" top="-2.5rem" right="9.5rem" zIndex="1" 
                   _hover={{ transform: 'scale(1.5)' }} 
                   sx={{
                     transition: 'transform 0.5s ease-in-out',
