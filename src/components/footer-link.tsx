@@ -7,20 +7,23 @@
 import { Text, Link } from '@chakra-ui/react'
 import NextLink from 'next/link'
 
-export const StyledLink = ({text, href="#", textStyles = 'footerText', textProps, ...linkProps}:
+export const StyledLink = ({text, href="#", textStyles = 'footerText', textProps, p, ...linkProps}:
   {
     text: any;
     href: string;
     textStyles?: string;
     textProps?: any;
+    p?: string;
     linkProps?: any;
   }) => {
-  
+
   return <Link
     as={NextLink}
     href={href}
+    p={p}
     //style={{textDecoration: 'none'}}
-    {...linkProps}>
+    {...linkProps}
+    >
       <Text textStyle={textStyles} {...textProps}>{text}</Text>
   </Link>;
 };

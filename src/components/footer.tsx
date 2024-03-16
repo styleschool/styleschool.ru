@@ -216,7 +216,7 @@ export default function Footer(props: any) {
                         color: 'rgb(87,143,163)'
                       }
                     }
-                  }} href="https://old.styleschool.ru/information-about-educational-organization" text="Сведения об образовательной организации" 
+                  }} href="/org-info" text="Сведения об образовательной организации" 
                 />
                 <StyledLink textStyles="footerLink"
                     textProps={{
@@ -228,7 +228,7 @@ export default function Footer(props: any) {
                         }
                       }
                     }}
-                    href="https://old.styleschool.ru/information" text="Информация для пользователей" 
+                    href="/user-info" text="Информация для пользователей" 
                   />
                   <StyledLink textStyles="footerLink"
                     textProps={{
