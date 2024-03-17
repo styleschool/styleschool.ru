@@ -24,7 +24,7 @@
         "type": "image",
         "width": "100%",
         "height": "400px",
-        "backgroundImage": "/banners/lamps.jpg",
+        "backgroundImage": "/infografic/lamps.jpg",
         "backgroundPosition": "right",
         "backgroundRepeat": "no-repeat",
         "backgroundColor": "#7C7060",

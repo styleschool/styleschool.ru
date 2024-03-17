@@ -24,7 +24,7 @@
         "type": "image",
         "width": "100%",
         "height": "400px",
-        "backgroundImage": "/banners/banner_image_consultant.jpg",
+        "backgroundImage": "/infografic/banner_image_consultant.jpg",
         "backgroundPosition": "center",
         "backgroundRepeat": "no-repeat",
         "backgroundColor": "#EBE8EB"
