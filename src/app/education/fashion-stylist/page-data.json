@@ -305,9 +305,9 @@
       "banner": {
         "type": "recommendations",
         "data": [
-          { "image": "/Group_72.jpg", "title": "Курс: 1 ступень", "href": "/education/style-consultant", "text": {"text": "Курс: 1 ступень", "backgroundColor": "#7D0101", "color": "white"}},
-          { "image": "/Group_72.jpg", "title": "Курс: нейросети", "href": "/education/nn-for-designers-and-stylists", "text": {"text": "Курс: нейросети",  "backgroundColor": "#7D0101", "color": "white"}},
-          { "image": "/Group_72.jpg", "title": "Курс: дизайн интерьера 1 степень", "href": "/education/interior-design", "text": {"text": "Курс: дизайн интерьера 1 степень", "backgroundColor": "#7D0101", "color": "white"}}
+          { "image": "/Group_72.jpg", "title": "Консультант по стилю", "href": "/education/style-consultant", "text": {"text": "Консультант по стилю", "backgroundColor": "#7D0101", "color": "white"}},
+          { "image": "/Group_72.jpg", "title": "Нейросети для креативных", "href": "/education/nn-for-designers-and-stylists", "text": {"text": "Нейросети для креативных",  "backgroundColor": "#7D0101", "color": "white"}},
+          { "image": "/Group_72.jpg", "title": "Дизайн интерьера", "href": "/education/interior-design", "text": {"text": "Дизайн интерьера", "backgroundColor": "#7D0101", "color": "white"}}
         ]
       }
     }
