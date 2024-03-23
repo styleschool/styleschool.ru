@@ -267,9 +267,9 @@
       "banner": {
         "type": "recommendations",
         "data": [
-          { "image": "/Group_72.jpg", "title": "Курс: 2 ступень", "href": "/education/interior-stylist", "text": {"text": "Курс: 2 ступень", "backgroundColor": "#7D0101", "color": "white"}},
-          { "image": "/Group_72.jpg", "title": "Курс: нейросети", "href": "/education/nn-for-designers-and-stylists", "text": {"text": "Курс: нейросети",  "backgroundColor": "#7D0101", "color": "white"}},
-          { "image": "/Group_72.jpg", "title": "Курс: консультант по стилю 1 степень", "href": "/education/style-consultant", "text": {"text": "Курс: консультант по стилю 1 степень", "backgroundColor": "#7D0101", "color": "white"}}
+          { "image": "/Group_72.jpg", "title": "Интерьерный стилист. Декоратор", "href": "/education/interior-stylist", "text": {"text": "Курс: 2 ступень", "backgroundColor": "#7D0101", "color": "white"}},
+          { "image": "/Group_72.jpg", "title": "Нейросети для креативных", "href": "/education/nn-for-designers-and-stylists", "text": {"text": "Курс: нейросети",  "backgroundColor": "#7D0101", "color": "white"}},
+          { "image": "/Group_72.jpg", "title": "Консультант по стилю", "href": "/education/style-consultant", "text": {"text": "Курс: консультант по стилю 1 степень", "backgroundColor": "#7D0101", "color": "white"}}
         ]
       }
     }
