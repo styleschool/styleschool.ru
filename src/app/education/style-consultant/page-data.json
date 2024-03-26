@@ -24,7 +24,7 @@
         "type": "image",
         "width": "100%",
         "height": "400px",
-        "backgroundImage": "/infografic/banner_image_consultant.jpg",
+        "backgroundImage": "/infografic/style_consultant_preview.png",
         "backgroundPosition": "center",
         "backgroundRepeat": "no-repeat",
         "backgroundColor": "#EBE8EB"
@@ -262,9 +262,9 @@
       "banner": {
         "type": "recommendations",
         "data": [
-          { "image": "/Group_72.jpg", "title": "Fashion стилист", "href": "/education/fashion-stylist", "text": {"text": "Fashion стилист", "backgroundColor": "#7D0101", "color": "white"}},
-          { "image": "/Group_72.jpg", "title": "Нейросети для креативных", "href": "/education/nn-for-designers-and-stylists", "text": {"text": "Нейросети для креативных",  "backgroundColor": "#7D0101", "color": "white"}},
-          { "image": "/Group_72.jpg", "title": "Дизайн интерьера", "href": "/education/interior-design", "text": {"text": "Дизайн интерьера", "backgroundColor": "#7D0101", "color": "white"}}
+          { "image": "/infografic/fashion-stylist_preview.png", "title": "Fashion стилист", "href": "/education/fashion-stylist", "text": {"text": "Fashion стилист", "backgroundColor": "#7D0101", "color": "white"}},
+          { "image": "/infografic/nn_preview.png", "title": "Нейросети для креативных", "href": "/education/nn-for-designers-and-stylists", "text": {"text": "Нейросети для креативных",  "backgroundColor": "#7D0101", "color": "white"}},
+          { "image": "/infografic/interior-design_preview.png", "title": "Дизайн интерьера", "href": "/education/interior-design", "text": {"text": "Дизайн интерьера", "backgroundColor": "#7D0101", "color": "white"}}
         ]
       }
     }

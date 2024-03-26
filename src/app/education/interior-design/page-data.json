@@ -24,11 +24,11 @@
         "type": "image",
         "width": "100%",
         "height": "400px",
-        "backgroundImage": "/infografic/lamps.jpg",
+        "backgroundImage": "/infografic/interior-design_image.png",
         "backgroundPosition": "right",
         "backgroundRepeat": "no-repeat",
         "backgroundColor": "#7C7060",
-        "backgroundSize": "contain"
+        "backgroundSize": "cover"
       },
       "title2": "Характеристики программы",
       "content": [
@@ -267,9 +267,9 @@
       "banner": {
         "type": "recommendations",
         "data": [
-          { "image": "/Group_72.jpg", "title": "Интерьерный стилист. Декоратор", "href": "/education/interior-stylist", "text": {"text": "Интерьерный стилист. Декоратор", "backgroundColor": "#7D0101", "color": "white"}},
-          { "image": "/Group_72.jpg", "title": "Нейросети для креативных", "href": "/education/nn-for-designers-and-stylists", "text": {"text": "Нейросети для креативных",  "backgroundColor": "#7D0101", "color": "white"}},
-          { "image": "/Group_72.jpg", "title": "Консультант по стилю", "href": "/education/style-consultant", "text": {"text": "Консультант по стилю", "backgroundColor": "#7D0101", "color": "white"}}
+          { "image": "/infografic/interior-stylist_preview.png", "title": "Интерьерный стилист. Декоратор", "href": "/education/interior-stylist", "text": {"text": "Интерьерный стилист. Декоратор", "backgroundColor": "#7D0101", "color": "white"}},
+          { "image": "/infografic/nn_preview.png", "title": "Нейросети для креативных", "href": "/education/nn-for-designers-and-stylists", "text": {"text": "Нейросети для креативных",  "backgroundColor": "#7D0101", "color": "white"}},
+          { "image": "/infografic/style_consultant_preview.png", "title": "Консультант по стилю", "href": "/education/style-consultant", "text": {"text": "Консультант по стилю", "backgroundColor": "#7D0101", "color": "white"}}
         ]
       }
     }

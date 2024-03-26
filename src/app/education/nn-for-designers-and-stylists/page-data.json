@@ -23,11 +23,10 @@
         "type": "image",
         "width": "100%",
         "height": "400px",
-        "backgroundImage": "/infografic/ai.jpg",
+        "backgroundImage": "/infografic/nn_image.png",
         "backgroundPosition": "right",
         "backgroundRepeat": "no-repeat",
-        "backgroundColor": "black",
-        "backgroundSize": "contain"
+        "backgroundSize": "cover"
       },
       "title2": "",
       "content": [
@@ -273,9 +272,9 @@
       "banner": {
         "type": "recommendations",
         "data": [
-          { "image": "/Group_72.jpg", "title": "Консультант по стилю", "href": "/education/style-consultant", "text": {"text": "Консультант по стилю", "backgroundColor": "#7D0101", "color": "white"}},
-          { "image": "/Group_72.jpg", "title": "Менеджер продукта", "href": "/education/ai-product-manager", "text": {"text": "Менеджер продукта",  "backgroundColor": "#7D0101", "color": "white"}},
-          { "image": "/Group_72.jpg", "title": "Дизайн интерьера", "href": "/education/interior-design", "text": {"text": "Дизайн интерьера", "backgroundColor": "#7D0101", "color": "white"}}
+          { "image": "/infografic/style_consultant_preview.png", "title": "Консультант по стилю", "href": "/education/style-consultant", "text": {"text": "Консультант по стилю", "backgroundColor": "#7D0101", "color": "white"}},
+          { "image": "/infografic/ai_preview.png", "title": "Менеджер продукта", "href": "/education/ai-product-manager", "text": {"text": "Менеджер продукта",  "backgroundColor": "#7D0101", "color": "white"}},
+          { "image": "/infografic/interior-design_preview.png", "title": "Дизайн интерьера", "href": "/education/interior-design", "text": {"text": "Дизайн интерьера", "backgroundColor": "#7D0101", "color": "white"}}
         ]
       }
     }
