@@ -41,9 +41,6 @@ export default function Home() {
           <Link as={NextLink} title="" href="#">
             <Text textStyle="Regular20">ПК и ПП в рамках Содействия занятости</Text>
           </Link>
-          <Link as={NextLink} title="" href="https://lk.styleschool.ru/">
-            <Text textStyle="Regular20">Курсы на Soho LMS</Text>
-          </Link>
         </Box>
       </Flex>
     </Flex>
