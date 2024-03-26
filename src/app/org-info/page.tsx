@@ -3,7 +3,6 @@
 import {
   Flex,
   Text,
-  Box,
   Link,
   useMediaQuery,
   UnorderedList,
@@ -37,7 +36,7 @@ export default function Home() {
           <Link
             as={NextLink}
             title="Основные сведения"
-            href="https://old.styleschool.ru/osnovnye-svedeniya"
+            href="/org-info/basic-info"
           >
             <Text textStyle="Regular16">
               Основные сведения
@@ -48,7 +47,7 @@ export default function Home() {
           <Link
             as={NextLink}
             title="Структура и органы управления образовательной организацией"
-            href="https://old.styleschool.ru/struktura-i-organy-upravleniya"
+            href="/org-info/structure"
           >
             <Text textStyle="Regular16">
               Структура и органы управления образовательной организацией
@@ -59,7 +58,7 @@ export default function Home() {
           <Link
             as={NextLink}
             title="Документы"
-            href="https://old.styleschool.ru/dokumenty"
+            href="/org-info/documents"
           >
             <Text textStyle="Regular16">
             Документы
@@ -70,7 +69,7 @@ export default function Home() {
           <Link
             as={NextLink}
             title="Образовательные программы"
-            href="https://old.styleschool.ru/obrazovateljnye-programmy"
+            href="/org-info/education"
           >
             <Text textStyle="Regular16">
               Образовательные программы
@@ -81,7 +80,7 @@ export default function Home() {
           <Link
             as={NextLink}
             title="Образовательные программы"
-            href="https://old.styleschool.ru/obrazovateljnye-standarty"
+            href="/org-info/standards"
           >
             <Text textStyle="Regular16">
             Образовательные стандарты
