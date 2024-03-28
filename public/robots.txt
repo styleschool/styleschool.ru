@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://new.styleschool.ru
+Host: https://styleschool.ru
 
 # Sitemaps
-Sitemap: https://new.styleschool.ru/sitemap.xml
+Sitemap: https://styleschool.ru/sitemap.xml

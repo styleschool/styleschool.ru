@@ -1,4 +1,4 @@
 module.exports = {
-    siteUrl: 'https://new.styleschool.ru',
+    siteUrl: 'https://styleschool.ru',
     generateRobotsTxt: true
   }
