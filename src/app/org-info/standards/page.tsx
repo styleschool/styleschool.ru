@@ -29,7 +29,7 @@ export default function Home() {
         АНО ДПО Высшая школа стилистики, дизайна и технологий
       </Text>
 
-      <Text textStyle="Bold20" color="black" mt="3rem" align="center">
+      <Text textStyle="Regular30" color="black" mt="3rem" align="center">
         Образовательные стандарты
       </Text>
       

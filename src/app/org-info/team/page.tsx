@@ -1,6 +1,6 @@
 "use client";
 
-import { Flex, Text, Link, useMediaQuery, Card, Stack, CardBody, Heading } from "@chakra-ui/react";
+import { Flex, Text, Link, useMediaQuery, Card, Box, CardBody, Heading } from "@chakra-ui/react";
 import NextLink from "next/link";
 import Image from 'next/image';
 import Header from "@/components/header";
@@ -34,7 +34,14 @@ export default function Home() {
           Генеральный директор: Гулиенко Иван Анатольевич
         </Text>
         <Text textStyle="Regular14">
-          Контактный телефон: +7 (915) 034-20-20
+          Контактный телефон:
+          <Link
+            as={NextLink}
+            title="+7 (915) 034-20-20"
+            href="tel:+79150342020"
+          >
+             +7 (915) 034-20-20
+          </Link>
         </Text>
         <Text textStyle="Regular14">
           Адрес электронной почты:
@@ -54,47 +61,45 @@ export default function Home() {
           Преподавательский состав
         </Text>
 
-        {/* <Card
+        <Card
           direction={{ base: "column", sm: "row" }}
           overflow="hidden"
           variant="outline"
         >
-          <Image src="/teachers/shabalina.jpg" width='200' height="200" alt="logo" />
+          <Flex>
+            <Box width="450px" >
+              <Image src="/teachers/shabalina.jpg" width="450" height="600" alt="logo"/>
+            </Box>
+            
 
-
-          заменить стэк на флекс,
-
-          <Stack>
             <CardBody>
-              <Heading size="sm">Кононец (Шабалина) Светлана Александровна</Heading>
+              <Heading size="sm" mb="5px">Кононец (Шабалина) Светлана Александровна</Heading>
               
-              <Text textStyle="Regular14">
+              <Text textStyle="Medium16" textDecoration="underline">
                 Должность
               </Text>
-              <Text textStyle="Regular14">
+              <Text textStyle="Regular14" mb="0.5rem">
                 Преподаватель ВШСДТ. Практикующий коуч-стилист, дизайнер одежды, автор блога Style Inside
               </Text>
 
-              <Text textStyle="Regular14">
+              <Text textStyle="Medium16">
                 Преподаваемые дисциплины
               </Text>
-              <Text textStyle="Regular14">
+              <Text textStyle="Regular14" mb="0.5rem">
                 Индивидуальная стилистика образа (теория стилевых направлений, профессиональная колористика, ассоциативный подход в стиле, алгоритм создания индивидуальной формулы стиля)
               </Text>
 
-              <Text textStyle="Regular14">
+              <Text textStyle="Medium16">
                 Наименование направления подготовки и (или) специальности
               </Text>
-              <Text textStyle="Regular14">
+              <Text textStyle="Regular14" mb="0.5rem">
                 Юридический факультет Орловский Государственный Университет, юриспруденция.
               </Text>
 
-
-          
-              <Text textStyle="Regular14">
+              <Text textStyle="Medium16">
                 Данные о повышении квалификации и (или) профессиональной переподготовке (при наличии)
               </Text>
-              <Text textStyle="Regular14">
+              <Text textStyle="Regular14" mb="0.5rem">
                 НОУ «Образование и карьера», модельер-конструктор одежды.
                 «Имиджмейкер (шопер). Базовый курс», Высшая школа стилистики.
                 «Стилист-имиджмейкер. Повышение квалификации», Высшая школа стилистики.
@@ -108,10 +113,22 @@ export default function Home() {
                 «Коуч-стилист», Школа образных решений «IDEA-class»
               </Text>
 
+              <Text textStyle="Medium16">
+                Общий стаж работы
+              </Text>
+              <Text textStyle="Regular14" mb="0.5rem">
+                Общий стаж в стилистике — 9 лет
+              </Text>
 
+              <Text textStyle="Medium16">
+                Стаж работы по специальности
+              </Text>
+              <Text textStyle="Regular14">
+                Преподавательская деятельность — 6 лет
+              </Text>
             </CardBody>
-          </Stack>
-        </Card> */}
+          </Flex>
+        </Card>
 
       </Flex>
 

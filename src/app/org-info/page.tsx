@@ -91,7 +91,7 @@ export default function Home() {
           <Link
             as={NextLink}
             title="Руководство. Педагогический состав"
-            href="https://old.styleschool.ru/rukovodstvo-i-pedagogicheskiy-sostav"
+            href="/org-info/team"
           >
             <Text textStyle="Regular16">
             Руководство. Педагогический состав
@@ -102,7 +102,7 @@ export default function Home() {
           <Link
             as={NextLink}
             title="Материально-техническое обеспечение и оснащенность образовательного процесса"
-            href="https://old.styleschool.ru/materialjno-tehnicheskoe-osnaschenie"
+            href="/org-info/equipment"
           >
             <Text textStyle="Regular16">
               Материально-техническое обеспечение и оснащенность образовательного процесса
@@ -113,7 +113,7 @@ export default function Home() {
           <Link
             as={NextLink}
             title="Стипендии и иные виды материальной поддержки"
-            href="https://old.styleschool.ru/stipendii"
+            href="/org-info/scholarships"
           >
             <Text textStyle="Regular16">
               Стипендии и иные виды материальной поддержки
@@ -124,7 +124,7 @@ export default function Home() {
           <Link
             as={NextLink}
             title="Платные и образовательные услуги"
-            href="https://old.styleschool.ru/platnye-obrazovateljnye-uslugi"
+            href="/org-info/educational-services"
           >
             <Text textStyle="Regular16">
               Платные и образовательные услуги
@@ -135,7 +135,7 @@ export default function Home() {
           <Link
             as={NextLink}
             title="Финансово-хозяйственная деятельность"
-            href="https://old.styleschool.ru/finansovo-hozyaystvennaya-deyateljnostj"
+            href="/org-info/finances"
           >
             <Text textStyle="Regular16">
               Финансово-хозяйственная деятельность
@@ -146,7 +146,7 @@ export default function Home() {
           <Link
             as={NextLink}
             title="Вакантные места для приема (перевода)"
-            href="https://old.styleschool.ru/vakantnye-mesta-dlya-priema"
+            href="/org-info/vacant-places"
           >
             <Text textStyle="Regular16">
               Вакантные места для приема (перевода)
