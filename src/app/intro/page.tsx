@@ -38,7 +38,7 @@ export default function Home() {
           <Link as={NextLink} title="Образование" href="https://edu.styleschool.ru/login/index.php">
             <Text textStyle="Regular20">ПК и ПП ВШСДТ</Text>
           </Link>
-          <Link as={NextLink} title="" href="#">
+          <Link as={NextLink} title="ПК и ПП в рамках Содействия занятости" href="#">
             <Text textStyle="Regular20">ПК и ПП в рамках Содействия занятости</Text>
           </Link>
         </Box>
