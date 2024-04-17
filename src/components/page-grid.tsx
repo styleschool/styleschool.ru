@@ -50,7 +50,7 @@ export const PageGrid = memo(function PageGrid(props: any) {
           </TextContainer>
           {
             list && list.length ? 
-            <VStack justify="center" align="flex-start">
+            <VStack justify="center" align="flex-start" maxW={450}>
               { list.map((item:string, i:number) => <Text 
                   key={i}
                   as="h4" 

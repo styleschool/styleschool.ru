@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
 import { Alegreya_Sans } from 'next/font/google';
 import { ChakraProvider } from '@chakra-ui/react';
+import Head from 'next/head'
+import Script from 'next/script'
 import theme from '../components/theme';
 
 const alegriya = Alegreya_Sans({ 
@@ -22,10 +24,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ru" className={alegriya.className}>
+      <Head>
+        <Script src="yandex.js" strategy='beforeInteractive' />
+      </Head>
       <body style={{ margin: 0 }}>
         <ChakraProvider theme={theme} cssVarsRoot="body">
           {children}
         </ChakraProvider>
+        <noscript><div><img src="https://mc.yandex.ru/watch/53888251" style={{ position: 'absolute', left:'-9999px' }} alt="" /></div></noscript>
       </body>
     </html>
   )
