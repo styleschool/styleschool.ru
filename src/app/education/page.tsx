@@ -17,14 +17,22 @@ import Header from "../../components/header";
 import courses from "./courses.json";
 import NextLink from "next/link";
 import { useSearchParams } from "next/navigation";
+import { Suspense } from 'react'
 
 import { Breadcrumb, BreadcrumbItem, BreadcrumbLink } from "@chakra-ui/react";
 
 const breadcrumbs = [{ text: "Каталог курсов" }];
 
-export default function Home() {
+export default function Courses() {
+  return <Suspense>
+    <PageComponent />
+  </Suspense>;
+}
+
+function PageComponent() {
   const [isMax959] = useMediaQuery("(max-width: 959px)");
-  const filter = useSearchParams().get("filter");
+  const search = useSearchParams();
+  const filter = search.get("filter");
 
   return (
     <Flex direction="column">

@@ -38,10 +38,9 @@ export default function Header(props: any) {
             <DrawerHeader>{`АНО ДПО ВШСДТ`}</DrawerHeader>
             <DrawerBody>
             <Box p="1rem">
-              <Link as={NextLink} title="Образование" href="/education"><Text textStyle="Regular20">Образование</Text></Link>
+              <Link as={NextLink} title="Образование" href="/education"><Text textStyle="Regular20">Каталог курсов</Text></Link>
               <Link as={NextLink} title="Поступление" href="/enrollment"><Text textStyle="Regular20">Поступление</Text></Link>
-              {/* <Link as={NextLink} title="Проекты" href=""><Text>Проекты</Text></Link>
-              <Link as={NextLink} title="О Школе" href=""><Text>О Школе</Text></Link> */}
+          <Link as={NextLink} title="Подготовка кадров" href="training"><Text textStyle="Regular20">Подготовка кадров</Text></Link>
               <Link as={NextLink} title="Контакты" href="/contacts"><Text textStyle="Regular20">Контакты</Text></Link>
             </Box>
             </DrawerBody>
