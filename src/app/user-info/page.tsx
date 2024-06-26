@@ -49,7 +49,7 @@ export default function Home() {
               <Text align="justify">Настоящие Правила обучения (далее Правила) устанавливают порядок оказания Автономной некоммерческой организацией дополнительного профессионального образования «Высшая школа стилистики, дизайна и технологий» (далее Исполнитель) образовательных услуг.</Text>
             </CardBody>
             <CardFooter>
-              <Link as={NextLink} title="Образование" href="https://old.styleschool.ru/information/rules">
+              <Link as={NextLink} title="Образование" href="/user-info/rules">
                 <Button leftIcon={<IconProvider size='2rem' icon={<PiSealWarningFill/>} color="primary" title='Warning'/>} color="primary" variant='solid'>
                   <Text textStyle="Regular16" color="primary">Подробнее</Text>
                 </Button>
@@ -68,7 +68,7 @@ export default function Home() {
               <Text align="justify">Пользовательское соглашение является офертой Договора. Предложение Товаров и Услуг на портале АНО ДПО ВШСДТ на условиях, указанных в предложении, и условиях настоящего Соглашения, является публичной офертой.</Text>
             </CardBody>
             <CardFooter>
-              <Link as={NextLink} title="Образование" href="https://old.styleschool.ru/information/agree">
+              <Link as={NextLink} title="Образование" href="/user-info/agreement">
                 <Button leftIcon={<IconProvider size='2rem' icon={<PiSealWarningFill/>} color="primary" title='Warning'/>} color="primary" variant='solid'>
                   <Text textStyle="Regular16" color="primary">
                     Подробнее
@@ -89,7 +89,7 @@ export default function Home() {
               <Text align="justify">Политика конфиденциальности и безопасности: согласие на обработку персональных данных (далее «Согласие на обработку персональных данных») Дата вступления в действие: 21/05/2018</Text>
             </CardBody>
             <CardFooter>
-              <Link as={NextLink} title="Образование" href="https://old.styleschool.ru/information/politic">
+              <Link as={NextLink} title="Образование" href="/user-info/politic">
                 <Button leftIcon={<IconProvider size='2rem' icon={<PiSealWarningFill/>} color="primary" title='Warning'/>} color="primary" variant='solid'>
                   <Text textStyle="Regular16" color="primary">
                     Подробнее
