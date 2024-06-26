@@ -668,7 +668,7 @@ export default function Home() {
           пом. I ком. 1, 2, 2а, 3;
         </Text>
         <Text textStyle="Regular14" color="black" mb="1rem">
-          р/с 40703810300000707477 в "ТИНЬКОФФ БАНК" (АО), г. Москва,
+          р/с 40703810300000707477 в &quot;ТИНЬКОФФ БАНК&quot; (АО), г. Москва,
         </Text>
         <Text textStyle="Regular14" color="black" mb="1rem">
           к/с 30101810145250000974, БИК 044525974,
