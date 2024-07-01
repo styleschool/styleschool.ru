@@ -1,4 +1,4 @@
-import { Box, Flex, HStack, Text, VStack, useMediaQuery, Link } from '@chakra-ui/react'
+import { Box, Flex, HStack, Text, VStack, useMediaQuery, Link, Button } from '@chakra-ui/react'
 import NextLink from 'next/link'
 import { memo } from "react"
 import { HoveredStyledLink } from "./footer-link";
@@ -12,6 +12,7 @@ import {
   BreadcrumbItem,
   BreadcrumbLink,
 } from '@chakra-ui/react'
+import PointButton from './buttons/point-button';
 
 export const PageGrid = memo(function PageGrid(props: any) {
   const [isMax667] = useMediaQuery('(max-width: 667px)');
@@ -21,7 +22,7 @@ export const PageGrid = memo(function PageGrid(props: any) {
     tags, list, points, breadcrumbs } = props;
   return (<>
     { title || title2 || description || details || tags || list 
-      ? <Flex direction="column" w="100%" p={isMax959 ? '6rem 2rem' : '7rem 6rem'}>
+      ? <Flex direction="column" w="100%" p={isMax959 ? '6rem 2rem' : '7rem 6rem 1rem 6rem'}>
         <Flex direction={isMax959 ? 'column' : 'row'} justify={isMax959 ? 'flex-start' : 'space-between'} mb="sm">
           <TextContainer direction="row" alignItems="flex-end" justify="flex-start" width={isMax959 ? '100%' : '50%'} mb={0} alignSelf='unset'>
 
@@ -118,7 +119,9 @@ export const PageGrid = memo(function PageGrid(props: any) {
                 </Box>
                 }) : null }
               
-              { point.button ? <Flex direction="row" w="100%" justifyContent="flex-end">
+              { point.button ? <PointButton { ...point.button } type={point.button.type ? point.button.type : 'circle'}/> : point.button ? <Button><Text textStyle="Bold16">{point.button.text}</Text></Button> : null }
+
+              {/* { point.button ? <Flex direction="row" w="100%" justifyContent="flex-end">
               <Link as={NextLink} title={point.button.title} href={point.button.href}><Box position="relative" textAlign="right" mb={point.button.mb === true ? isMax959 ? 0 : 'md' : point.button.mb ? point.button.mb : undefined }>
                 <Box 
                   w="6.5rem" h="6.5rem" 
@@ -132,7 +135,7 @@ export const PageGrid = memo(function PageGrid(props: any) {
                 />
                 <Text textStyle="Bold16">{point.button.text}</Text>
               </Box></Link></Flex> : null 
-              }
+              } */}
               {
                 point.details && point.details.length ? point.details.map((detail: {text: string; mb?: boolean|string; textStyles?: string}, i: number) => 
                 <TextDescription
