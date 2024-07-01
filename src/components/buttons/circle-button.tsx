@@ -2,7 +2,7 @@ import { Flex, Box, Link, Text, useMediaQuery } from '@chakra-ui/react';
 import { memo } from "react";
 import NextLink from 'next/link';
 
-export default memo(function circleButton(props: any) {
+export default memo(function CircleButton(props: any) {
     const [isMax959] = useMediaQuery('(max-width: 959px)')
 
   return (
