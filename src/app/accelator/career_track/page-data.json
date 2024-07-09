@@ -1,0 +1,119 @@
+{
+  "title": "КАРЬЕРНЫЙ ТРЕК СТИЛИСТОВ И ДИЗАЙНЕРОВ",
+  "title2": "КАЙРОС DS",
+  "description": "Кайрос DS - (t.me/kairos_ds) – объединение специалистов в области индустрии моды и дизайна среды с разных регионов Российской Федерации. Основа сообщества - выпускники совместных программ НИ «Томский государственный университет» и АНО ДПО «Высшая школа стилистики, дизайна и технологий».",
+  "list": ["ДОСТУПЕН ДЛЯ ВСЕХ", "Организаторы: ВШСДТ", "Для любого уровня подготовки"],
+  "tags": [
+    {
+      "id": "program",
+      "text": "#О сообществе"
+    },
+    {
+      "id": "teachers",
+      "text": "#Руководитель"
+    }
+  ],
+  "points": [
+    {
+      "mb": "0px",
+      "banner": {
+        "type": "image",
+        "width": "100%",
+        "height": "400px",
+        "backgroundImage": "/infografic/fashion-stylist_image.png",
+        "backgroundPosition": "right",
+        "backgroundRepeat": "repeat-x",
+        "backgroundSize": "cover"
+      }
+    },
+    {
+      "mb": "0px",
+      "button": {"text": "подробнее о поступлении", "href": "/enrollment", "title": "подробнее о поступлении"}
+    },
+    {
+      "title2": "Подробнее о сообществе:",
+      "id": "program",
+      "content":[
+        {"text": "Цель объединения – содействие занятости граждан, в том числе подготовка кадров и развитие услуг в области индустрии моды, дизайне интерьера."},
+        {"text": "Участниками являются студенты - выпускники совместных программ НИ ТГУ и ВШСДТ разных регионов Российской Федерации: Карелия, Марий Эл, Мордовия, Якутия, Татарстан, Алтайский, Краснодарский, Красноярский, Ставропольский, Пермский край, Вороженская, Иркутская, Калужская, Кемеровская, Ленинградская, Мурманская, Нижегородская, Новосибирская, Омская, Пензенская область, Москва, Санкт- Петербург."}
+      ]
+    },
+    {
+      "title": "Созидая благоприятное время, встречая вызов будущего."
+    },
+    {
+      "banner": {
+        "type": "gallery",
+        "text": "Чемпионат дизайнеров Екатерины Юнусовой (Группа 1)",
+        "items": [
+          {"original": "../accelator/career_track/championship_yunusova/group1/results_group1.jpg", "originalAlt": "results_group1", "originalTitle": "Работа группы 1"},
+          {"original": "../accelator/career_track/championship_yunusova/group1/results_group1_2.jpg", "originalAlt": "results_group1", "originalTitle": "Работа группы 1"},
+          {"original": "../accelator/career_track/championship_yunusova/group1/results_group1_3.jpg", "originalAlt": "results_group1", "originalTitle": "Работа группы 1"},
+          {"original": "../accelator/career_track/championship_yunusova/group1/results_group1_4.jpg", "originalAlt": "results_group1", "originalTitle": "Работа группы 1"},
+          {"original": "../accelator/career_track/championship_yunusova/group1/results_group1_5.jpg", "originalAlt": "results_group1", "originalTitle": "Работа группы 1"},
+          {"original": "../accelator/career_track/championship_yunusova/group1/results_group1_6.jpg", "originalAlt": "results_group1", "originalTitle": "Работа группы 1"},
+          {"original": "../accelator/career_track/championship_yunusova/group1/results_group1_7.jpg", "originalAlt": "results_group1", "originalTitle": "Работа группы 1"},
+          {"original": "../accelator/career_track/championship_yunusova/group1/results_group1_8.jpg", "originalAlt": "results_group1", "originalTitle": "Работа группы 1"}
+        ]
+      }
+    },
+    {
+      "banner": {
+        "type": "gallery",
+        "text": "Чемпионат дизайнеров Екатерины Юнусовой (Группа 2)",
+        "items": [
+          {"original": "../accelator/career_track/championship_yunusova/group2/results_group2.jpg", "originalAlt": "results_group2", "originalTitle": "Работа группы 2"},
+          {"original": "../accelator/career_track/championship_yunusova/group2/results_group2_2.jpg", "originalAlt": "results_group2", "originalTitle": "Работа группы 2"},
+          {"original": "../accelator/career_track/championship_yunusova/group2/results_group2_3.jpg", "originalAlt": "results_group2", "originalTitle": "Работа группы 2"},
+          {"original": "../accelator/career_track/championship_yunusova/group2/results_group2_4.jpg", "originalAlt": "results_group2", "originalTitle": "Работа группы 2"},
+          {"original": "../accelator/career_track/championship_yunusova/group2/results_group2_5.jpg", "originalAlt": "results_group2", "originalTitle": "Работа группы 2"},
+          {"original": "../accelator/career_track/championship_yunusova/group2/results_group2_6.jpg", "originalAlt": "results_group2", "originalTitle": "Работа группы 2"}
+        ]
+      }
+    },
+    {
+      "banner": {
+        "type": "gallery",
+        "text": "Благотворительный конкурс",
+        "items": [
+          {"original": "../accelator/career_track/championship_yunusova/diplom_gratitude.jpg", "originalAlt": "diplom_gratitude", "originalTitle": "Диплом благодарности"}
+        ]
+      }
+    },
+    {
+      "banner": {
+        "type": "video",
+        "text": "Ребрендинг ArtFiera ",
+        "url": "/accelator/career_track/championship_yunusova/artfiera_rebranding.MOV"
+      }
+    },
+    {
+      "title2": "Руководитель проекта",
+      "id": "teachers"
+    },
+    {
+      "banner": {
+        "title2": "Руководитель проекта",
+        "type": "cards",
+        "data": [
+          {"image": "/teachers//evgenia_golitsina.jpeg", "texts": [
+            { "text": "Евгения Голицына"},
+            { "text": "Евгения - выпускница совместных программ НИ ТГУ И ВШСДТ проекта “Содействие занятости” по направлению “Консультант по стилю”, магистр педагогического образования, 10 лет педагогического стажа,статьи в международном сборнике трудов научной конференции “Проблемы экологического образования в xxi веке” стилист-имиджмейкер, руководитель проекта “Кайрос DS”, специалист учебно-методического отдела ВШСДТ, разработчик курсов. " }]}
+        ]
+      }
+    },
+    {
+      "title2": "Вас может заинтересовать"
+    },
+    {
+      "banner": {
+        "type": "recommendations",
+        "data": [
+          { "image": "/infografic/style_consultant_preview.png", "title": "Консультант по стилю", "href": "/education/style-consultant", "text": {"text": "Консультант по стилю", "backgroundColor": "#7D0101", "color": "white"}},
+          { "image": "/infografic/nn_preview.png", "title": "Нейросети для креативных", "href": "/education/nn-for-designers-and-stylists", "text": {"text": "Нейросети для креативных",  "backgroundColor": "#7D0101", "color": "white"}},
+          { "image": "/infografic/interior-design_preview.png", "title": "Дизайн интерьера", "href": "/education/interior-design", "text": {"text": "Дизайн интерьера", "backgroundColor": "#7D0101", "color": "white"}}
+        ]
+      }
+    }
+  ]
+}

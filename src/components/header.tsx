@@ -15,7 +15,7 @@ import {
   Box,
   useDisclosure,
   Link,
-  Text
+  Text, Menu, MenuButton,  MenuList,  MenuItem 
 } from '@chakra-ui/react'
 import NextLink from 'next/link'
 import { PiUserFill } from "react-icons/pi";
@@ -39,8 +39,16 @@ export default function Header(props: any) {
             <DrawerBody>
             <Box p="1rem">
               <Link as={NextLink} title="Образование" href="/education"><Text textStyle="Regular20">Каталог курсов</Text></Link>
+              <Menu isLazy>
+                <MenuButton><Text textStyle="Regular20">Акселератор</Text></MenuButton>
+                <MenuList>
+                  <MenuItem><Link as={NextLink} title="Дизайнер модного бренда" href="/accelator/fashion_brand_designer"><Text textStyle="Regular16"> Дизайнер модного бренда</Text></Link></MenuItem>
+                  <MenuItem><Link as={NextLink} title="Модный бренд в fashion - индустрии" href="/accelator/brand_in_fashion_industry"><Text textStyle="Regular16">Модный бренд в fashion - индустрии</Text></Link></MenuItem>
+                  <MenuItem><Link as={NextLink} title="Карьерный трект стилистов и дизайнеров" href="/accelator/career_track"><Text textStyle="Regular16">Карьерный трект стилистов и дизайнеров </Text></Link></MenuItem>
+                </MenuList>
+              </Menu>
               <Link as={NextLink} title="Поступление" href="/enrollment"><Text textStyle="Regular20">Поступление</Text></Link>
-          <Link as={NextLink} title="Подготовка кадров" href="training"><Text textStyle="Regular20">Подготовка кадров</Text></Link>
+              <Link as={NextLink} title="Подготовка кадров" href="/training"><Text textStyle="Regular20">Подготовка кадров</Text></Link>
               <Link as={NextLink} title="Контакты" href="/contacts"><Text textStyle="Regular20">Контакты</Text></Link>
             </Box>
             </DrawerBody>
