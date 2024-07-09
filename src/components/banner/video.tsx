@@ -13,7 +13,7 @@ export default memo(function Video(props: any) {
           <Text textStyle="Regular16" align="justify">{text}</Text>
         </Box> : null}
         <Box p="1rem" width={isMax959 ? "100%" : '60%'}>
-          <ReactPlayer url={url}  width="100%"/>
+          <ReactPlayer controls url={url}  width="100%"/>
         </Box>
       </Flex>
     </Flex>
